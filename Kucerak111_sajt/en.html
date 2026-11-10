@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Kućerak 111 | Apartments with Pool Vrdnik</title>
+    
+    <link rel="icon" type="image/png" href="slike/logo.png_.png">
+
+    <meta name="description" content="Enjoy luxury apartments Kućerak 111 in Vrdnik. Private swimming pool, beautiful yard, and perfect peace for your holiday. Book your stay directly.">
+    <meta name="keywords" content="kucerak 111, apartments vrdnik, accommodation vrdnik, vrdnik pool apartments, luxury accommodation fruška gora">
+
+    <meta property="og:title" content="Kućerak 111 | Apartments with Pool Vrdnik">
+    <meta property="og:description" content="A perfect vacation in Vrdnik. Private pool, modernly equipped apartments, and peaceful surroundings.">
+    <meta property="og:image" content="https://tvojdomen.com/slike/IMG_5951.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'kucerak-beige': '#FDFBF7',
+                        'kucerak-sand': '#F4EFE6',
+                        'kucerak-olive': '#3B4A3F',
+                        'kucerak-moss': '#556B2F',
+                        'kucerak-dark': '#1C231F'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Engleska lokalizacija za kalendar je automatski ugrađena u flatpickr -->
+</head>
+<body class="bg-kucerak-beige text-kucerak-dark font-sans antialiased">
+
+    <!-- NAVIGACIJA (EN VERSION) -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-kucerak-beige/90 backdrop-blur-md border-b border-kucerak-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center h-20 w-full">
+                
+                <!-- LEVA STRANA: LOGO -->
+                <div class="w-48 flex-shrink-0">
+                    <a href="#pocetna" class="font-serif text-xl md:text-2xl font-bold text-kucerak-dark tracking-wide block whitespace-nowrap">
+                        KUĆERAK<span class="text-kucerak-olive italic font-semibold text-lg md:text-xl">111</span>
+                    </a>
+                </div>
+
+                <!-- SREDINA: LINKOVI (Sa bezbednim razmakom od telefona) -->
+                <div class="hidden lg:flex flex-1 justify-center space-x-5 xl:space-x-7 font-medium text-xs tracking-widest uppercase">
+                    <a href="#pocetna" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Home</a>
+                    <a href="#apartmani" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Apartments</a>
+                    <a href="#sadrzaj" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Yard & Pool</a>
+                    <a href="#cene-pravila" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Prices</a>
+                    <a href="#prosolve" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Events</a>
+                    <a href="#lokacija" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">About Vrdnik</a>
+                    <a href="#faq" class="text-kucerak-olive hover:text-kucerak-moss font-medium transition whitespace-nowrap mr-8 xl:mr-12">FAQ</a>
+                </div>
+
+                <!-- DESNA STRANA: AKCIJE (Sa elegantnom vertikalnom linijom ispred telefona) -->
+                <div class="flex items-center space-x-3 xl:space-x-4 flex-shrink-0 justify-end">
+                    <a href="tel:+381652716277" class="hidden xl:inline-block text-kucerak-olive font-medium text-xs tracking-wider uppercase hover:text-kucerak-moss transition whitespace-nowrap border-l border-kucerak-sand/60 pl-6 h-5 flex items-center">
+                        <i class="fa-solid fa-phone mr-2"></i> +381 65 2716277
+                    </a>
+                    <a href="#rezervacija" class="bg-kucerak-olive text-kucerak-beige px-4 py-2.5 xl:px-5 xl:py-3 rounded-md text-xs font-semibold uppercase tracking-wider hover:bg-kucerak-moss transition shadow-md whitespace-nowrap">
+                        Book Now
+                    </a>
+                    
+                    <!-- LANGUAGE SELECTOR WITH FLAGS -->
+                    <div class="hidden md:flex items-center space-x-2 border-l border-kucerak-sand pl-3 h-6">
+                        <a href="index.html" class="w-4 h-4 rounded-full overflow-hidden shadow-sm border border-transparent hover:border-kucerak-olive transition duration-300 opacity-50 hover:opacity-100 flex-shrink-0" title="Srpski">
+                            <img src="https://flagcdn.com/w40/rs.png" alt="Srpski" class="w-full h-full object-cover">
+                        </a>
+                        <span class="text-kucerak-olive/30 text-xs">/</span>
+                        <div class="w-4 h-4 rounded-full overflow-hidden shadow-sm border border-kucerak-sand flex-shrink-0">
+                            <img src="https://flagcdn.com/w40/gb.png" alt="English" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION WITH NEW FOREST BACKGROUND -->
+    <section id="pocetna" class="relative pt-20 min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1920&auto=format&fit=crop');">
+        
+        <!-- Premium light overlay to keep text completely readable -->
+        <div class="absolute inset-0 bg-kucerak-beige/85 backdrop-blur-[1px] z-0"></div>
+        
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <span class="text-kucerak-moss font-semibold uppercase tracking-widest text-xs sm:text-sm block mb-4">Vrdnik Spa • Fruška Gora</span>
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-7xl font-bold text-kucerak-dark leading-tight mb-6">
+                Your escape into nature, <br class="hidden md:block"><span class="italic font-normal text-kucerak-moss">peace and pure relaxation</span>
+            </h1>
+            <p class="text-base sm:text-xl text-kucerak-olive/80 max-w-2xl mx-auto mb-10 font-light">
+                A modern boutique complex of 3 apartments with a private pool, a spacious summer house with BBQ facilities, and a beautiful children's playground located at Vojvođanske brigade 93.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#apartmani" class="border border-kucerak-olive text-kucerak-olive px-8 py-4 rounded-md font-medium hover:bg-kucerak-olive hover:text-kucerak-beige transition">
+                    Explore Apartments
+                </a>
+                <a href="#rezervacija" class="bg-kucerak-moss text-kucerak-beige px-8 py-4 rounded-md font-medium hover:bg-kucerak-olive transition shadow-lg">
+                    Check Availability
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- BRZI INFO SVEJTLOSTI (QUICK INFO HIGHLIGHTS) -->
+    <section class="py-12 bg-kucerak-olive text-kucerak-beige">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <i class="fa-solid fa-swimming-pool text-3xl text-kucerak-sand mb-3"></i>
+                    <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Outdoor Pool</h3>
+                </div>
+                <div>
+                    <i class="fa-solid fa-fire-burner text-3xl text-kucerak-sand mb-3"></i>
+                    <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Summer House & BBQ</h3>
+                </div>
+                <div>
+                    <i class="fa-solid fa-child-reaching text-3xl text-kucerak-sand mb-3"></i>
+                    <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Kids Playground</h3>
+                </div>
+                <div>
+                    <i class="fa-solid fa-paw text-3xl text-kucerak-sand mb-3"></i>
+                    <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Pet-Friendly</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APARTMANI (APARTMENTS) -->
+    <section id="apartmani" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-kucerak-moss font-semibold uppercase tracking-wider text-sm">Accommodation</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-kucerak-dark">Our Apartments</h2>
+            <p class="text-kucerak-olive/70 mt-4 max-w-xl mx-auto">Three identical, modernly equipped two-room apartments of 35 m² each, ready to comfortably host up to 4 adults.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Plavi Apartman -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-kucerak-sand group hover:shadow-xl transition duration-300">
+                <div class="relative h-64 bg-gray-200 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
+                    <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs uppercase tracking-widest px-3 py-1 font-semibold rounded z-20">Blue Apartment</span>
+                    <img src="slike/IMG_5941.jpg" alt="Blue Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-expand mr-1"></i> 35 m²</span>
+                        <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-users mr-1"></i> Up to 4 guests</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-kucerak-dark mb-2">Blue Comfort</h3>
+                    <p class="text-sm text-kucerak-olive/80 mb-6 font-light">Separate bedroom with a double bed, a living room with a cozy sofa bed, fully equipped kitchen, and a private terrace.</p>
+                    <button onclick="openModal('plavi')" class="w-full py-3 bg-kucerak-sand hover:bg-kucerak-olive hover:text-kucerak-beige text-kucerak-olive font-semibold rounded text-sm uppercase tracking-wider transition">View Details</button>
+                </div>
+            </div>
+
+            <!-- Zeleni Apartman -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-kucerak-sand group hover:shadow-xl transition duration-300">
+                <div class="relative h-64 bg-gray-200 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
+                    <span class="absolute top-4 left-4 bg-emerald-700 text-white text-xs uppercase tracking-widest px-3 py-1 font-semibold rounded z-20">Green Apartment</span>
+                    <img src="slike/IMG_5959.jpg" alt="Green Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-expand mr-1"></i> 35 m²</span>
+                        <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-users mr-1"></i> Up to 4 guests</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-kucerak-dark mb-2">Green Peace</h3>
+                    <p class="text-sm text-kucerak-olive/80 mb-6 font-light">Ideally positioned with a direct view of the main yard. Fully equipped for a peaceful family vacation or romantic getaways.</p>
+                    <button onclick="openModal('zeleni')" class="w-full py-3 bg-kucerak-sand hover:bg-kucerak-olive hover:text-kucerak-beige text-kucerak-olive font-semibold rounded text-sm uppercase tracking-wider transition">View Details</button>
+                </div>
+            </div>
+
+            <!-- Žuti Apartman -->
+            <div class="bg-white rounded-lg overflow-hidden shadow-sm border border-kucerak-sand group hover:shadow-xl transition duration-300">
+                <div class="relative h-64 bg-gray-200 overflow-hidden">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
+                    <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs uppercase tracking-widest px-3 py-1 font-semibold rounded z-20">Yellow Apartment</span>
+                    <img src="slike/IMG_5966.jpg" alt="Yellow Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-expand mr-1"></i> 35 m²</span>
+                        <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-users mr-1"></i> Up to 4 guests</span>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-kucerak-dark mb-2">Yellow Warmth</h3>
+                    <p class="text-sm text-kucerak-olive/80 mb-6 font-light">An exceptionally bright, sunlit apartment with a beautiful balcony. Perfect for enjoying morning coffee to the sound of birds.</p>
+                    <button onclick="openModal('zuti')" class="w-full py-3 bg-kucerak-sand hover:bg-kucerak-olive hover:text-kucerak-beige text-kucerak-olive font-semibold rounded text-sm uppercase tracking-wider transition">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DVORIŠTE, BAZEN I ROŠTILJ (YARD, POOL & BBQ) -->
+    <section id="sadrzaj" class="bg-kucerak-sand py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="text-kucerak-moss font-semibold uppercase tracking-wider text-sm">Outdoor Paradise</span>
+                    <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-kucerak-dark mb-6">More than accommodation – tailored for enjoyment</h2>
+                    <p class="text-kucerak-olive/80 mb-6 leading-relaxed font-light">
+                        Kućerak 111 offers a unique exterior layout designed so that every guest can find their spot for peace or entertainment. With three separate yards (two smaller ones and one spacious shared area), your privacy is guaranteed.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-kucerak-olive text-kucerak-beige p-2 rounded mt-1">
+                                <i class="fa-solid fa-person-swimming w-5 h-5 text-center"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-kucerak-dark">Refreshing Pool</h4>
+                                <p class="text-sm text-kucerak-olive/70">A beautifully designed outdoor pool equipped with comfortable sunbeds and umbrellas for the perfect summer days.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-kucerak-olive text-kucerak-beige p-2 rounded mt-1">
+                                <i class="fa-solid fa-utensils w-5 h-5 text-center"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-kucerak-dark">Fully Equipped Summer House</h4>
+                                <p class="text-sm text-kucerak-olive/70">Built-in stone barbecue, cauldron area, and traditional hot plate. Everything you need for premium outdoor culinary gatherings.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-kucerak-olive text-kucerak-beige p-2 rounded mt-1">
+                                <i class="fa-solid fa-child-reaching w-5 h-5 text-center"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-kucerak-dark">Carefree Kids' Paradise</h4>
+                                <p class="text-sm text-kucerak-olive/70">A large trampoline, swings, slide, and climbing structures on a safe, lush lawn where children are always secure and entertained.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KARUSEL -->
+                <div class="relative rounded-xl overflow-hidden border border-kucerak-sand/40 shadow-lg h-[450px] bg-kucerak-dark group cursor-pointer" onclick="openYardLightbox()">
+                    <div id="yardSlider" class="flex w-full h-full transition-transform duration-700 ease-in-out">
+                        <div class="min-w-full h-full flex-shrink-0">
+                            <img src="slike/IMG_5951.jpg" alt="Yard" class="w-full h-full object-cover">
+                        </div>
+                        <div class="min-w-full h-full flex-shrink-0">
+                            <img src="slike/289450498_Kucerak111IMG20210525171705jpg" alt="Pool" class="w-full h-full object-cover">
+                        </div>
+                        <div class="min-w-full h-full flex-shrink-0">
+                            <img src="slike/541740150_Kucerak111IMG19965a791baeb20273364d9553269f47Vjpg" alt="Summer House" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    
+                    <div class="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-sm z-10 flex items-center gap-1">
+                        <i class="fa-solid fa-expand"></i> Click for full gallery
+                    </div>
+
+                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
+                        <span class="w-2.5 h-2.5 bg-white rounded-full transition-all duration-300" id="dot0"></span>
+                        <span class="w-2.5 h-2.5 bg-white/50 rounded-full transition-all duration-300" id="dot1"></span>
+                        <span class="w-2.5 h-2.5 bg-white/50 rounded-full transition-all duration-300" id="dot2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CENE I PRAVILA (RATES & RULES) -->
+    <section id="cene-pravila" class="py-24 bg-kucerak-beige border-t border-b border-kucerak-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-kucerak-moss font-semibold uppercase tracking-wider text-sm">Information</span>
+                <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-kucerak-dark">Rates & Stay</h2>
+                <p class="text-kucerak-olive/70 mt-4 max-w-xl mx-auto">Transparent pricing with no hidden costs. Review our seasonal rates and flexible house rules below.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div class="bg-white p-8 rounded-xl shadow-sm border border-kucerak-sand">
+                    <h3 class="font-serif text-2xl font-bold text-kucerak-dark mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-tags text-kucerak-moss text-xl"></i> Price Per Night
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center pb-4 border-b border-kucerak-sand/60">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-user-friends text-kucerak-olive text-lg"></i>
+                                <span class="font-medium text-kucerak-dark">Stay for 2 guests</span>
+                            </div>
+                            <span class="font-serif text-xl font-bold text-kucerak-olive">60 € <span class="text-xs font-sans font-normal text-kucerak-olive/60">/ night</span></span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center pb-4 border-b border-kucerak-sand/60">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-user-plus text-kucerak-olive text-lg"></i>
+                                <span class="font-medium text-kucerak-dark">Stay for 3 guests</span>
+                            </div>
+                            <span class="font-serif text-xl font-bold text-kucerak-olive">70 € <span class="text-xs font-sans font-normal text-kucerak-olive/60">/ night</span></span>
+                        </div>
+                        
+                        <div class="flex justify-between items-center pb-4">
+                            <div class="flex items-center gap-3">
+                                <i class="fa-solid fa-users text-kucerak-olive text-lg"></i>
+                                <span class="font-medium text-kucerak-dark">Stay for 4 guests</span>
+                            </div>
+                            <span class="font-serif text-xl font-bold text-kucerak-olive">80 € <span class="text-xs font-sans font-normal text-kucerak-olive/60">/ night</span></span>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 bg-kucerak-sand/50 border border-dashed border-kucerak-moss/40 p-4 rounded-lg flex items-center gap-4">
+                        <div class="bg-kucerak-moss text-kucerak-beige w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-lg font-bold">
+                            -15%
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-kucerak-dark text-sm uppercase tracking-wider">Long-stay discount!</h4>
+                            <p class="text-xs text-kucerak-olive/80 mt-0.5">For all bookings of 5 or more nights, we automatically apply a 15% discount to the total price.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-6">
+                    <h3 class="font-serif text-2xl font-bold text-kucerak-dark mb-2 flex items-center gap-2">
+                        <i class="fa-solid fa-clock text-kucerak-moss text-xl"></i> Check-in & Check-out
+                    </h3>
+                    
+                    <div class="bg-white p-6 rounded-lg border border-kucerak-sand shadow-sm flex items-start gap-4">
+                        <div class="text-kucerak-moss text-2xl mt-1">
+                            <i class="fa-solid fa-door-open"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-kucerak-dark mb-1">Check-in: from 2:00 PM</h4>
+                            <p class="text-sm text-kucerak-olive/80 leading-relaxed font-light">
+                                Standard entry to your freshly prepared and cleaned apartment is available from 2:00 PM.
+                            </p>
+                            <div class="mt-2 text-xs text-emerald-700 font-medium bg-emerald-50 px-2.5 py-1.5 rounded inline-flex items-center gap-1.5 border border-emerald-100">
+                                <i class="fa-solid fa-circle-check"></i> Early arrival welcome! You are welcome to arrive before 2:00 PM to drop off your luggage and relax by the pool or in the yard while your room is being completed.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border border-kucerak-sand shadow-sm flex items-start gap-4">
+                        <div class="text-kucerak-moss text-2xl mt-1">
+                            <i class="fa-solid fa-door-closed"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-kucerak-dark mb-1">Check-out: by 10:00 AM</h4>
+                            <p class="text-sm text-kucerak-olive/80 leading-relaxed font-light">
+                                Please check out of the apartment by 10:00 AM on your departure date so we have enough time to perfectly prepare it for incoming guests.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-lg border border-kucerak-sand shadow-sm flex items-start gap-4">
+                        <div class="text-kucerak-moss text-2xl mt-1">
+                            <i class="fa-solid fa-calendar-day"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-kucerak-dark mb-1">Minimum Stay</h4>
+                            <p class="text-sm text-kucerak-olive/80 leading-relaxed font-light">
+                                To fully immerse yourself in the tranquility and recharge your batteries in Fruška Gora, the minimum reservation length is **2 nights**.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROSLAVE & GRUPE (EVENTS & GROUPS) -->
+    <section id="prosolve" class="py-24 bg-kucerak-dark text-kucerak-beige relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10"></div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+            <span class="text-kucerak-sand uppercase tracking-wider text-xs sm:text-sm font-semibold">Exclusive Property Rental</span>
+            <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 mb-6">Planning a birthday, team building, bachelor or bachelorette party?</h2>
+            <p class="text-kucerak-sand/80 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
+                Rent all three apartments at once and enjoy **complete privacy of the entire complex**. All accommodation capacities (up to 12 overnight guests total), the swimming pool, summer house, and the entire yard will be reserved exclusively for your group.
+            </p>
+            <a href="#rezervacija" onclick="selectTeambuilding()" class="inline-block bg-kucerak-sand text-kucerak-dark px-8 py-4 rounded-md font-semibold tracking-wider uppercase text-sm hover:bg-white transition shadow-lg">
+                Send Group Inquiry
+            </a>
+        </div>
+    </section>
+
+    <!-- LOKACIJA (LOCATION) -->
+    <section id="lokacija" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-kucerak-moss font-semibold uppercase tracking-wider text-sm">Where to find us</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2 text-kucerak-dark mb-6">In the heart of Vrdnik Spa, on the slopes of Fruška Gora</h2>
+                <p class="text-kucerak-olive/80 mb-6 font-light leading-relaxed">
+                    We are located in a peaceful area, perfectly positioned to combine complete isolation from noise with quick and easy access to all key tourist attractions.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-sm mb-6">
+                    <div class="border-l-2 border-kucerak-moss pl-3">
+                        <span class="font-bold block text-kucerak-dark">Exact Address</span>
+                        Vojvođanske brigade 93, Vrdnik
+                    </div>
+                    <div class="border-l-2 border-kucerak-moss pl-3">
+                        <span class="font-bold block text-kucerak-dark">Town Center</span>
+                        Just a 10-minute easy walk
+                    </div>
+                    <div class="border-l-2 border-kucerak-moss pl-3">
+                        <span class="font-bold block text-kucerak-dark">Thermal Springs</span>
+                        Close to hotels with pools and spa centers
+                    </div>
+                    <div class="border-l-2 border-kucerak-moss pl-3">
+                        <span class="font-bold block text-kucerak-dark">Distance</span>
+                        Novi Sad 23km • Belgrade 60km
+                    </div>
+                </div>
+            </div>
+            <div class="w-full h-96 bg-kucerak-sand rounded-lg overflow-hidden border border-kucerak-sand shadow-sm relative">
+                <iframe 
+                    class="w-full h-full border-0"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2813.5134707647253!2d20.007661276793617!3d45.12615465584877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475b1192e2e7cb61%3A0x6b86b8c9d0ee40ad!2sVojvo%C4%91anske%20brigade%2093%2C%20Vrdnik!5e0!3m2!1ssr!2srs!4v1717256000000!5m2!1ssr!2srs" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+    <!-- ========================================== -->
+    <!-- SECTION: FREQUENTLY ASKED QUESTIONS (FAQ)  -->
+    <!-- ========================================== -->
+    <section id="faq" class="relative bg-white py-20 border-t border-kucerak-sand block" style="z-index: 10;">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="text-center mb-12">
+                <h2 class="font-serif text-3xl font-bold text-kucerak-dark">Frequently Asked Questions</h2>
+                <p class="text-sm text-kucerak-olive/70 mt-2">Everything you need to know about your stay at Kućerak 111</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Question 1 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">Can more than 12 people attend a celebration or team building event?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        The sleeping capacity across all three apartments is 12 people in total. However, for daytime events, birthdays, and team building gatherings, the complex can accommodate a larger number of guests. Stays exceeding the overnight capacity (12+ people) are subject to an additional charge by prior arrangement.
+                    </p>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">Are you pet-friendly?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        Yes, we are pet-friendly! Your well-behaved and house-trained pets are more than welcome. Please notify us in advance when sending your inquiry so we can prepare everything for your arrival.
+                    </p>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">What is the minimum stay requirement?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        The minimum stay in our apartments is 2 nights. For longer stays (5 or more nights), we automatically apply a 15% discount to your total booking amount.
+                    </p>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">When is the swimming pool open?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        The outdoor pool is open during the summer season (approximately from May to October, depending on weather conditions). It is regularly maintained and filtered to ensure the water is always perfectly clean for our guests.
+                    </p>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">What are the check-in and check-out times?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        Check-in is available from 2:00 PM, and check-out is by 10:00 AM on the final day of your stay. If you require different timing due to event organization, please feel free to state it in the notes section.
+                    </p>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">Does the property provide Wi-Fi and air conditioning?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        Absolutely! All our apartments are fully air-conditioned, and the entire complex (including the yard and summer house) is covered by fast, free Wi-Fi, allowing you to enjoy your stay seamlessly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVATION FORM -->
+    <section id="rezervacija" class="bg-kucerak-sand py-24">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 sm:p-12 rounded-xl shadow-md border border-kucerak-sand">
+            <div class="text-center mb-8">
+                <h2 class="font-serif text-3xl font-bold text-kucerak-dark">Book Your Holiday</h2>
+                <p class="text-sm text-kucerak-olive/70 mt-2">Fill out the form below. Your inquiry goes directly to our email inbox, and we will contact you as shortly as possible.</p>
+            </div>
+            
+            <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm" class="space-y-6" onsubmit="return validirajDatume(event)">
+                
+                <!-- Web3Forms configuration -->
+                <input type="hidden" name="access_key" value="76202b6e-afe0-4e07-97ea-c0a5f796e3ab">
+                <input type="hidden" name="subject" value="Nova rezervacija sa sajta Kućerak 111">
+                <input type="hidden" name="from_name" value="Kućerak 111 Sajt">
+                <input type="hidden" name="redirect" value="hvala.html">
+
+                <!-- Anti-spam honeypot fields -->
+                <div style="display:none;" aria-hidden="true">
+                    <input type="text" id="praznoPolje" name="prazno_polje" value="">
+                </div>
+
+                <div style="display:none;" aria-hidden="true">
+                    <input type="text" id="praznoPolje2" name="prazno_polje_2" value="">
+                </div>
+
+                <!-- First row: Name and Phone -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Full Name</label>
+                        <input type="text" name="Ime i Prezime" required class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="e.g. John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Phone Number (WhatsApp/Viber)</label>
+                        <input 
+                            type="tel" 
+                            name="Telefon" 
+                            required 
+                            pattern="[0-9+\s\-]+" 
+                            oninput="this.setCustomValidity(''); checkPhone(this);"
+                            oninvalid="this.setCustomValidity('Wrong Number Format! Please enter a valid phone number (e.g., +381 65 2716277)')"
+                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" 
+                            placeholder="+381 65 2716277">
+                    </div>
+                </div>
+
+                <!-- Second row: Arrival and Departure Dates -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Arrival Date</label>
+                        <input 
+                            type="date" 
+                            id="dolazak"
+                            name="Dolazak" 
+                            required 
+                            onchange="postaviMinOdlazak()"
+                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Departure Date</label>
+                        <input 
+                            type="date" 
+                            id="odlazak"
+                            name="Odlazak" 
+                            required 
+                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
+                    </div>
+                </div>
+
+                <!-- Third row: Accommodation Selection -->
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Select Accommodation</label>
+                    <select id="smeštajSelektor" name="Izabrani Smeštaj" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm cursor-pointer" style="min-height: 46px;">
+                        <option value="bilo-koji">Any available apartment</option>
+                        <option value="plavi">Blue Apartment</option>
+                        <option value="zeleni">Green Apartment</option>
+                        <option value="zuti">Yellow Apartment</option>
+                        <option value="ceo-kompleks">Entire Complex (All 3 apartments)</option>
+                    </select>
+                </div>
+
+                <!-- Fourth row: Special Notes -->
+                <div>
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Special Requests / Notes</label>
+                    <textarea name="Napomena" rows="3" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="e.g. Traveling with pets, baby cot needed, event organization details..."></textarea>
+                </div>
+
+                <!-- Fifth row: Submit Button -->
+                <div class="pt-2 flex justify-center">
+                    <button type="submit" class="w-full sm:w-auto px-12 py-3.5 bg-kucerak-olive hover:bg-kucerak-moss text-kucerak-beige font-bold uppercase tracking-widest text-sm rounded transition shadow-md">
+                        Send Booking Inquiry
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- FLOATING CONTACT BUTTONS -->
+    <div class="fixed bottom-6 right-6 z-40 flex flex-col space-y-3">
+        <a href="https://wa.me/381652716277" target="_blank" class="w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center text-2xl shadow-xl hover:scale-110 transition duration-300">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <a href="tel:+381652716277" class="w-14 h-14 bg-kucerak-olive text-kucerak-beige rounded-full flex items-center justify-center text-xl shadow-xl hover:scale-110 transition duration-300">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-[#1e251f] text-[#eae6df]/80 pt-12 pb-6 px-4 border-t border-white/5">
+        <div class="max-w-6xl mx-auto">
+            <!-- Upper part: Brand, Description, and Socials -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-8 pb-8 border-b border-white/5">
+                
+                <!-- Brand & Short Description -->
+                <div class="text-center md:text-left space-y-2">
+                    <h3 class="font-serif text-2xl font-bold text-white tracking-wide">KUĆERAK<span class="italic text-[#a3b899]">111</span></h3>
+                    <p class="text-sm text-[#eae6df]/60 max-w-sm">Your oasis of peace and luxury accommodation in the very heart of Vrdnik Spa.</p>
+                </div>
+
+                <!-- Social Networks -->
+                <div class="space-y-3 text-center md:text-right">
+                    <p class="text-xs uppercase tracking-widest text-[#a3b899] font-semibold">Follow Us</p>
+                    <div class="flex justify-center md:justify-end space-x-5">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/kucerak111/" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#eae6df]/80 hover:bg-[#e1306c] hover:text-white transition-all duration-300" title="Instagram">
+                            <i class="fab fa-instagram text-lg"></i>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/kucerak111/?locale=sr_RS" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#eae6df]/80 hover:bg-[#3b5998] hover:text-white transition-all duration-300" title="Facebook">
+                            <i class="fab fa-facebook-f text-base"></i>
+                        </a>
+                        <!-- TikTok -->
+                        <a href="https://www.tiktok.com/@kucerak111" target="_blank" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-[#eae6df]/80 hover:bg-black hover:text-white transition-all duration-300" title="TikTok">
+                            <i class="fab fa-tiktok text-base"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lower part: Copyrights -->
+            <div class="flex flex-col sm:flex-row justify-between items-center pt-6 text-xs text-[#eae6df]/40 gap-4">
+                <p>© 2026 Kućerak 111 Vrdnik. All rights reserved.</p>
+                <p class="tracking-wide">Designed with <span class="text-red-400/60">♥</span> in Vrdnik</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- APARTMENT DETAILS MODAL (POPUP) -->
+    <div id="apartmentModal" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm">
+        <div class="bg-white max-w-2xl w-full rounded-xl overflow-hidden shadow-2xl transform scale-95 transition-all duration-300 max-h-[90vh] overflow-y-auto">
+            
+            <!-- INTEGRATED MODAL GALLERY -->
+            <div class="relative h-64 sm:h-80 bg-gray-900">
+                <button onclick="closeModal()" class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition">
+                    <i class="fa-solid fa-xmark text-lg"></i>
+                </button>
+                
+                <!-- Main large modal image -->
+                <img id="modalImg" src="" alt="Accommodation" class="w-full h-full object-cover">
+                
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
+                    <h3 id="modalTitle" class="font-serif text-2xl sm:text-3xl font-bold text-white"></h3>
+                </div>
+            </div>
+
+            <!-- THUMBNAILS BELOW LARGE IMAGE -->
+            <div class="bg-kucerak-dark px-6 py-3 flex gap-3 justify-center border-b border-kucerak-sand/20">
+                <img id="thumb0" src="" onclick="switchModalThumb(0)" class="w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
+                <img id="thumb1" src="" onclick="switchModalThumb(1)" class="w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
+                <img id="thumb2" src="" onclick="switchModalThumb(2)" class="w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
+            </div>
+
+            <div class="p-6 sm:p-8 space-y-6">
+                <div>
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-kucerak-moss mb-2">About the apartment</h4>
+                    <p id="modalDesc" class="text-kucerak-olive/80 text-sm leading-relaxed font-light"></p>
+                </div>
+                <div class="grid grid-cols-2 gap-4 border-t border-b border-kucerak-sand py-4 text-sm">
+                    <div class="flex items-center gap-2 text-kucerak-olive">
+                        <i class="fa-solid fa-bed w-5 text-kucerak-moss"></i> Double bed + seating set
+                    </div>
+                    <div class="flex items-center gap-2 text-kucerak-olive">
+                        <i class="fa-solid fa-tv w-5 text-kucerak-moss"></i> Smart TV + Wi-Fi
+                    </div>
+                    <div class="flex items-center gap-2 text-kucerak-olive">
+                        <i class="fa-solid fa-snowflake w-5 text-kucerak-moss"></i> Air conditioning
+                    </div>
+                    <div class="flex items-center gap-2 text-kucerak-olive">
+                        <i class="fa-solid fa-kitchen-set w-5 text-kucerak-moss"></i> Fully equipped kitchen
+                    </div>
+                </div>
+                <div class="flex items-center justify-between">
+                    <span class="text-xs text-kucerak-olive/60 font-medium">* All units feature climate control and private terraces</span>
+                    <button onclick="closeModal(); setTimeout(() => { document.getElementById('rezervacija').scrollIntoView({ behavior: 'smooth' }); }, 300);" class="bg-kucerak-olive hover:bg-kucerak-moss text-kucerak-beige px-6 py-2.5 rounded text-sm font-semibold tracking-wider uppercase transition">Book This Unit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- YARD / TIMELINES GALLERY LIGHTBOX -->
+    <div id="yardLightbox" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
+        <button onclick="closeYardLightbox()" class="absolute top-6 right-6 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        
+        <!-- Left arrow -->
+        <button onclick="changeLightboxImg(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+        </button>
+
+        <!-- Image Container -->
+        <div class="max-w-4xl w-full max-h-[80vh] flex items-center justify-center">
+            <img id="lightboxTargetImg" src="slike/IMG_1562.jpg" alt="Yard Gallery Large" class="max-w-full max-h-[80vh] object-contain rounded shadow-2xl transition-all duration-300 transform scale-95">
+        </div>
+
+        <!-- Right arrow -->
+        <button onclick="changeLightboxImg(1)" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
+            <i class="fa-solid fa-chevron-right text-lg"></i>
+        </button>
+        
+        <!-- Image Counter -->
+        <div id="lightboxCounter" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/70 text-sm tracking-widest font-medium">
+            1 / 3
+        </div>
+    </div>
+<script>
+        
+        // --- UNTOUCHED ACCURATE PROPERTY DATA WITH ENGLISH TRANSLATIONS ---
+        const apartmaniPodaci = {
+            plavi: {
+                naslov: 'Blue Apartment',
+                opis: 'A modern and relaxing interior styled with soothing blue tones that provide maximum comfort and elegance.',
+                slike: [
+                    'slike/IMG_5941.jpg',
+                    'slike/IMG_3693.JPG.jpeg',
+                    'slike/IMG_3694.JPG.jpeg'
+                ]
+            },
+            zeleni: {
+                naslov: 'Green Apartment',
+                opis: 'Perfectly in harmony with the surrounding nature, this apartment offers a seamless balance between its interior design and the beautiful outdoors.',
+                slike: [
+                    'slike/IMG_5959.jpg',
+                    'slike/IMG_5937.jpg',
+                    'slike/IMG_5801.JPG.jpeg'
+                ]
+            },
+            zuti: {
+                naslov: 'Yellow Apartment',
+                opis: 'An exceptionally bright and warm ambient, ideal for recharging your batteries and enjoying the morning sunshine.',
+                slike: [
+                    'slike/IMG_5966.jpg',
+                    'slike/IMG_5962.jpg',
+                    'slike/IMG_5965.jpg'
+                ]
+            }
+        };
+
+        let currentActiveImages = [];
+
+        function openModal(id) {
+            const data = apartmaniPodaci[id];
+            if (!data) return;
+            
+            currentActiveImages = data.slike;
+            
+            document.getElementById('modalTitle').innerText = data.naslov;
+            document.getElementById('modalDesc').innerText = data.opis;
+            
+            // Set images to the three thumbnails below and remove active borders
+            for(let i=0; i<3; i++) {
+                const thumb = document.getElementById(`thumb${i}`);
+                thumb.src = data.slike[i];
+                thumb.classList.replace('border-white', 'border-transparent');
+                thumb.classList.replace('opacity-100', 'opacity-70');
+            }
+            
+            // Display the first image as the main featured one
+            switchModalThumb(0);
+
+            const modal = document.getElementById('apartmentModal');
+            modal.classList.remove('invisible', 'opacity-0');
+            modal.firstElementChild.classList.remove('scale-95');
+            document.body.classList.add('overflow-hidden');
+        }
+
+        function switchModalThumb(index) {
+            document.getElementById('modalImg').src = currentActiveImages[index];
+            
+            // Update borders and opacity to reflect the currently selected thumbnail
+            for(let i=0; i<3; i++) {
+                const thumb = document.getElementById(`thumb${i}`);
+                if(i === index) {
+                    thumb.classList.replace('border-transparent', 'border-white');
+                    thumb.classList.replace('opacity-70', 'opacity-100');
+                } else {
+                    thumb.classList.replace('border-white', 'border-transparent');
+                    thumb.classList.replace('opacity-100', 'opacity-70');
+                }
+            }
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('apartmentModal');
+            modal.classList.add('invisible', 'opacity-0');
+            modal.firstElementChild.classList.add('scale-95');
+            document.body.classList.remove('overflow-hidden');
+        }
+
+        document.getElementById('apartmentModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+
+        // --- SMOOTH SLIDING SEAMLESS CAROUSEL FOR THE YARD ---
+        const yardImages = [
+            'slike/IMG_5951.jpg',
+            'slike/289450498_Kucerak111IMG20210525171705jpg',
+            'slike/541740150_Kucerak111IMG19965a791baeb20273364d9553269f47Vjpg'
+        ];
+        let currentYardIndex = 0;
+        const yardSlider = document.getElementById('yardSlider');
+
+        function moveYardSlide() {
+            currentYardIndex = (currentYardIndex + 1) % yardImages.length;
+            yardSlider.style.transform = `translateX(-${currentYardIndex * 100}%)`;
+            
+            for (let i = 0; i < yardImages.length; i++) {
+                const dot = document.getElementById(`dot${i}`);
+                if (dot) {
+                    if (i === currentYardIndex) {
+                        dot.classList.replace('bg-white/50', 'bg-white');
+                    } else {
+                        dot.classList.replace('bg-white', 'bg-white/50');
+                    }
+                }
+            }
+        }
+        
+        let autoSliderInterval = setInterval(moveYardSlide, 5000);
+
+        // --- LIGHTBOX GALLERY FOR THE YARD (ON CLICK) ---
+        let lightboxIndex = 0;
+
+        function openYardLightbox() {
+            lightboxIndex = currentYardIndex;
+            updateLightboxView();
+            
+            const lightbox = document.getElementById('yardLightbox');
+            lightbox.classList.remove('invisible', 'opacity-0');
+            document.getElementById('lightboxTargetImg').classList.remove('scale-95');
+            document.body.classList.add('overflow-hidden');
+        
+            clearInterval(autoSliderInterval);
+        }
+
+        function closeYardLightbox() {
+            const lightbox = document.getElementById('yardLightbox');
+            lightbox.classList.add('invisible', 'opacity-0');
+            document.getElementById('lightboxTargetImg').classList.add('scale-95');
+            document.body.classList.remove('overflow-hidden');
+            
+            autoSliderInterval = setInterval(moveYardSlide, 5000);
+        }
+
+        function changeLightboxImg(direction) {
+            lightboxIndex = (lightboxIndex + direction + yardImages.length) % yardImages.length;
+            updateLightboxView();
+        }
+
+        function updateLightboxView() {
+            const imgElement = document.getElementById('lightboxTargetImg');
+            imgElement.style.opacity = '0';
+            setTimeout(() => {
+                imgElement.src = yardImages[lightboxIndex];
+                imgElement.style.opacity = '1';
+                document.getElementById('lightboxCounter').innerText = `${lightboxIndex + 1} / ${yardImages.length}`;
+            }, 150);
+        }
+
+        document.getElementById('yardLightbox').addEventListener('click', function(e) {
+            if (e.target === this || e.target.parentElement === this) closeYardLightbox();
+        });
+
+        document.addEventListener('keydown', function(e) {
+            const lightbox = document.getElementById('yardLightbox');
+            if (lightbox && !lightbox.classList.contains('invisible')) {
+                if (e.key === 'ArrowRight') changeLightboxImg(1);
+                if (e.key === 'ArrowLeft') changeLightboxImg(-1);
+                if (e.key === 'Escape') closeYardLightbox();
+            }
+        });
+
+        function selectTeambuilding() {
+            const selector = document.getElementById('smeštajSelektor');
+            if (selector) selector.value = 'ceo-kompleks';
+        }
+
+        // =========================================================================
+        // --- PHONE VALIDATION & DATE LOCKING (PREVENTING PAST SELECTIONS) ---
+        // =========================================================================
+
+        // Sets the minimum booking date to today upon page load
+        document.addEventListener("DOMContentLoaded", function() {
+            const danas = new Date().toISOString().split('T')[0];
+            const poljeDolazak = document.getElementById('dolazak');
+            const poljeOdlazak = document.getElementById('odlazak');
+            
+            // Disallows selection of any historical dates
+            if (poljeDolazak && poljeOdlazak) {
+                poljeDolazak.min = danas;
+                poljeOdlazak.min = danas;
+            }
+        });
+
+        // Automatically updates the minimum departure date based on arrival selection
+        function postaviMinOdlazak() {
+            const poljeDolazak = document.getElementById('dolazak');
+            const poljeOdlazak = document.getElementById('odlazak');
+            
+            if (poljeDolazak && poljeDolazak.value) {
+                let datum = new Date(poljeDolazak.value);
+                datum.setDate(datum.getDate() + 1); // Check-out must be at least 1 day after check-in
+                const sutradan = datum.toISOString().split('T')[0];
+                
+                poljeOdlazak.min = sutradan;
+                
+                // Reset invalid departure field if previously picked ahead of arrival
+                if (poljeOdlazak.value && poljeOdlazak.value < sutradan) {
+                    poljeOdlazak.value = '';
+                }
+            }
+        }
+
+        // Filters out letters and invalid characters dynamically as user types
+        function checkPhone(input) {
+            input.value = input.value.replace(/[^0-9+\s\-]/g, '');
+        }
+
+        // Main Form Interceptor: Handles data integrity, submission throttling, and honeypots
+        function validirajDatume(event) {
+            // 1. BOT PROTECTION (Honeypot)
+            const zamka = document.getElementById('praznoPolje');
+            if (zamka && zamka.value !== "") {
+                event.preventDefault(); // Silently block form submission if hidden input is filled
+                return false;
+            }
+
+            // 2. RATE LIMITING (Max 1 inquiry submission every 5 minutes)
+            const poslednjeSlanje = localStorage.getItem('vremePoslednjegUpita');
+            const sada = new Date().getTime();
+            const petMinuta = 5 * 60 * 1000; // 5 minutes in milliseconds
+
+            if (poslednjeSlanje && (sada - poslednjeSlanje < petMinuta)) {
+                const preostaloSekundi = Math.ceil((petMinuta - (sada - poslednjeSlanje)) / 1000);
+                alert(`Your booking inquiry has already been received. Please wait another ${preostaloSekundi} seconds before sending another request.`);
+                event.preventDefault();
+                return false;
+            }
+
+            // 3. DATE LOGIC VALIDATION
+            const poljeDolazak = document.getElementById('dolazak');
+            const poljeOdlazak = document.getElementById('odlazak');
+            
+            if (poljeDolazak && poljeOdlazak) {
+                const datumDolaska = new Date(poljeDolazak.value);
+                const datumOdlaska = new Date(poljeOdlazak.value);
+                
+                if (datumOdlaska <= datumDolaska) {
+                    alert("Error: The departure date cannot be earlier than or equal to the arrival date!");
+                    event.preventDefault(); // Stop submission process
+                    return false;
+                }
+            }
+
+            // Timestamp successful request, then dispatch form safely
+            localStorage.setItem('vremePoslednjegUpita', sada);
+            return true;
+        }
+    </script>
+</body>
+</html>
