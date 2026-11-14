@@ -592,7 +592,7 @@
 
                 <!-- Price estimate (filled by JavaScript) -->
                 <div id="procenaCene" class="bg-kucerak-sand/50 border border-dashed border-kucerak-moss/40 rounded-lg p-4 text-sm text-kucerak-olive" aria-live="polite">Select arrival and departure dates to see an estimated price.</div>
-                
+                <input type="hidden" id="procenjenaCena" name="Procenjena cena" value="">
                 <!-- Submit -->
                 <div class="pt-2 flex justify-center">
                     <button type="submit" class="w-full sm:w-auto px-12 py-3.5 bg-kucerak-olive hover:bg-kucerak-moss text-kucerak-beige font-bold uppercase tracking-widest text-sm rounded transition shadow-md">
@@ -968,6 +968,8 @@
             const sada = Date.now();
             const pauza = 5 * 60 * 1000;
             let poslednje = 0;
+            const poljeCena = document.getElementById('procenjenaCena');
+            if (poljeCena) poljeCena.value = cenaZaMejl();
             try { poslednje = parseInt(localStorage.getItem('vremePoslednjegUpita'), 10) || 0; } catch (e) {}
             if (poslednje && (sada - poslednje < pauza)) {
                 const s = Math.ceil((pauza - (sada - poslednje)) / 1000);
@@ -1040,9 +1042,28 @@
         // --- PRICE ESTIMATE ---
         // =========================================================================
         const CENE_PO_NOCI = { 1: 60, 2: 60, 3: 70, 4: 80 };   // € per apartment per night
-        const POPUST_DUZI_BORAVAK = 0.15;                       // 15%
+        const POPUST_DUZI_BORAVAK = 0.15;              // 15%
         const MIN_NOCI_ZA_POPUST = 5;
-        const DECA_SE_RACUNAJU = true;                          // false = adults only
+        const DECA_SE_RACUNAJU = true;                 // false = adults only
+
+        // Kratak tekst o ceni za mejl
+        function cenaZaMejl() {
+            const dol = document.getElementById('dolazak').value;
+            const odl = document.getElementById('odlazak').value;
+            if (!dol || !odl) return '';
+            const noci = Math.round((new Date(odl + 'T00:00:00') - new Date(dol + 'T00:00:00')) / 86400000);
+            const odrasli = parseInt(document.getElementById('odrasli').value, 10) || 0;
+            const deca = parseInt(document.getElementById('deca').value, 10) || 0;
+            const gostiju = Math.max(1, odrasli + (DECA_SE_RACUNAJU ? deca : 0));
+            const izbor = document.getElementById('smeštajSelektor').value;
+
+            if (izbor === 'ceo-kompleks') return `po dogovoru (ceo kompleks, ${noci} noćenja)`;
+            if (gostiju > 4) return `po dogovoru (${gostiju} gostiju, više apartmana)`;
+
+            const osnovno = CENE_PO_NOCI[gostiju] * noci;
+            const popust = noci >= MIN_NOCI_ZA_POPUST ? Math.round(osnovno * POPUST_DUZI_BORAVAK) : 0;
+            return `${osnovno - popust} € (${noci} noćenja` + (popust ? ', popust 15%' : '') + ')';
+        }
 
         function racunajCenu() {
             const box = document.getElementById('procenaCene');
