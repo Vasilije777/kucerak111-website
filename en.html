@@ -5,23 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Kućerak 111 | Apartments with Pool Vrdnik</title>
-
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Kućerak 111",
-  "alternateName": [
-    "Kucerak 111",
-    "Kućerak111",
-    "Kucerak111",
-    "Kućerak 111 Vrdnik",
-    "Kucerak 111 Vrdnik",
-    "Apartmani Vrdnik Kućerak 111"
-  ],
-  "url": "https://vasilije777.github.io/kucerak111-website/"
-}
-</script>
     
     <link rel="icon" type="image/png" href="slike/logo.png_.png">
 
@@ -139,7 +122,7 @@
     <!-- BRZI INFO SVEJTLOSTI (QUICK INFO HIGHLIGHTS) -->
     <section class="py-12 bg-kucerak-olive text-kucerak-beige">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
                 <div>
                     <i class="fa-solid fa-swimming-pool text-3xl text-kucerak-sand mb-3"></i>
                     <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Outdoor Pool</h3>
@@ -155,6 +138,10 @@
                 <div>
                     <i class="fa-solid fa-paw text-3xl text-kucerak-sand mb-3"></i>
                     <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Pet-Friendly</h3>
+                </div>
+                    <div class="col-span-2 md:col-span-1">
+                    <i class="fa-solid fa-square-parking text-3xl text-kucerak-sand mb-3"></i>
+                    <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Parking</h3>
                 </div>
             </div>
         </div>
@@ -436,6 +423,10 @@
                         <span class="font-bold block text-kucerak-dark">Distance</span>
                         Novi Sad 23km • Belgrade 60km
                     </div>
+                    <div class="border-l-2 border-kucerak-moss pl-3 col-span-2">
+                        <span class="font-bold block text-kucerak-dark">Parking</span>
+                        Parking spaces for guests' cars on the property
+                    </div>
                 </div>
             </div>
             <div class="w-full h-96 bg-kucerak-sand rounded-lg overflow-hidden border border-kucerak-sand shadow-sm relative">
@@ -512,25 +503,29 @@
         </div>
     </section>
 
-    <!-- RESERVATION FORM -->
+    <<!-- RESERVATION FORM -->
     <section id="rezervacija" class="bg-kucerak-sand py-24">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 sm:p-12 rounded-xl shadow-md border border-kucerak-sand">
             <div class="text-center mb-8">
                 <h2 class="font-serif text-3xl font-bold text-kucerak-dark">Book Your Holiday</h2>
-                <p class="text-sm text-kucerak-olive/70 mt-2">Fill out the form below. Your inquiry goes directly to our email inbox, and we will contact you as shortly as possible.</p>
+                <p class="text-sm text-kucerak-olive/70 mt-2">Fill out the form below. Your inquiry goes directly to our email inbox, and we will contact you as soon as possible.</p>
             </div>
-            
+
             <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm" class="space-y-6" onsubmit="return validirajDatume(event)">
-                
+
                 <!-- Web3Forms configuration -->
                 <input type="hidden" name="access_key" value="76202b6e-afe0-4e07-97ea-c0a5f796e3ab">
                 <input type="hidden" name="subject" value="Nova rezervacija sa sajta Kućerak 111">
                 <input type="hidden" name="from_name" value="Kućerak 111 Sajt">
-                <input type="hidden" name="redirect" value="hvala.html">
+                <input type="hidden" name="redirect" value="hvala-en.html">
 
-            
+                <!-- Anti-spam honeypot -->
+                <div style="display:none;" aria-hidden="true">
+                    <input type="text" id="praznoPolje" name="prazno_polje" value="" tabindex="-1" autocomplete="off">
+                    <input type="checkbox" name="botcheck" tabindex="-1">
+                </div>
 
-                <!-- First row: Name and Phone -->
+                <!-- Name and phone -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Full Name</label>
@@ -538,43 +533,46 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Phone Number (WhatsApp/Viber)</label>
-                        <input 
-                            type="tel" 
-                            name="Telefon" 
-                            required 
-                            pattern="[0-9+\s\-]+" 
+                        <input type="tel" name="Telefon" required pattern="[0-9+\s\-]+"
                             oninput="this.setCustomValidity(''); checkPhone(this);"
-                            oninvalid="this.setCustomValidity('Wrong Number Format! Please enter a valid phone number (e.g., +381 65 2716277)')"
-                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" 
+                            oninvalid="this.setCustomValidity('Wrong number format! Please enter a valid phone number (e.g., +381 65 2716277)')"
+                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm"
                             placeholder="+381 65 2716277">
                     </div>
                 </div>
 
-                <!-- Second row: Arrival and Departure Dates -->
+                <!-- Dates -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Arrival Date</label>
-                        <input 
-                            type="date" 
-                            id="dolazak"
-                            name="Dolazak" 
-                            required 
-                            onchange="postaviMinOdlazak()"
-                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
+                        <input type="date" id="dolazak" placeholder="Select date" name="Dolazak" required class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
                     </div>
-
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Departure Date</label>
-                        <input 
-                            type="date" 
-                            id="odlazak"
-                            name="Odlazak" 
-                            required 
-                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
+                        <input type="date" id="odlazak" placeholder="Select date" name="Odlazak" required class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
                     </div>
                 </div>
 
-                <!-- Third row: Accommodation Selection -->
+                <!-- Guests, e-mail, pet -->
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Number of adults</label>
+                        <input type="number" id="odrasli" name="Broj odraslih" min="1" max="12" value="2" required class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Number of children</label>
+                        <input type="number" id="deca" name="Broj dece" min="0" max="8" value="0" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">E-mail (optional)</label>
+                        <input type="email" name="email" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="name@example.com">
+                    </div>
+                </div>
+                <label class="flex items-center gap-3 text-sm text-kucerak-olive cursor-pointer">
+                    <input type="checkbox" name="Ljubimac" value="Da" class="w-4 h-4" style="accent-color:#556B2F;"> I am traveling with a pet
+                </label>
+
+                <!-- Accommodation -->
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Select Accommodation</label>
                     <select id="smeštajSelektor" name="Izabrani Smeštaj" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm cursor-pointer" style="min-height: 46px;">
@@ -586,18 +584,22 @@
                     </select>
                 </div>
 
-                <!-- Fourth row: Special Notes -->
+                <!-- Notes -->
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Special Requests / Notes</label>
                     <textarea name="Napomena" rows="3" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="e.g. Traveling with pets, baby cot needed, event organization details..."></textarea>
                 </div>
 
-                <!-- Fifth row: Submit Button -->
+                <!-- Price estimate (filled by JavaScript) -->
+                <div id="procenaCene" class="bg-kucerak-sand/50 border border-dashed border-kucerak-moss/40 rounded-lg p-4 text-sm text-kucerak-olive" aria-live="polite">Select arrival and departure dates to see an estimated price.</div>
+                
+                <!-- Submit -->
                 <div class="pt-2 flex justify-center">
                     <button type="submit" class="w-full sm:w-auto px-12 py-3.5 bg-kucerak-olive hover:bg-kucerak-moss text-kucerak-beige font-bold uppercase tracking-widest text-sm rounded transition shadow-md">
                         Send Booking Inquiry
                     </button>
                 </div>
+                <p class="text-xs text-center text-kucerak-olive/60">By sending this inquiry you agree that we use your data only to reply to your request.</p>
             </form>
         </div>
     </section>
@@ -902,87 +904,203 @@
             if (selector) selector.value = 'ceo-kompleks';
         }
 
-        // =========================================================================
-        // --- PHONE VALIDATION & DATE LOCKING (PREVENTING PAST SELECTIONS) ---
+                // =========================================================================
+        // --- DATES (flatpickr), PHONE, FORM VALIDATION, MENU ---
         // =========================================================================
 
-        // Sets the minimum booking date to today upon page load
-        document.addEventListener("DOMContentLoaded", function() {
-            const danas = new Date().toISOString().split('T')[0];
-            const poljeDolazak = document.getElementById('dolazak');
-            const poljeOdlazak = document.getElementById('odlazak');
-            
-            // Disallows selection of any historical dates
-            if (poljeDolazak && poljeOdlazak) {
-                poljeDolazak.min = danas;
-                poljeOdlazak.min = danas;
-            }
-        });
+        // Booked dates: e.g. ["2026-12-24", {from: "2026-12-30", to: "2027-01-02"}]
+        const ZAUZETI_TERMINI = [];
 
-        // Automatically updates the minimum departure date based on arrival selection
-        function postaviMinOdlazak() {
-            const poljeDolazak = document.getElementById('dolazak');
-            const poljeOdlazak = document.getElementById('odlazak');
-            
-            if (poljeDolazak && poljeDolazak.value) {
-                let datum = new Date(poljeDolazak.value);
-                datum.setDate(datum.getDate() + 1); // Check-out must be at least 1 day after check-in
-                const sutradan = datum.toISOString().split('T')[0];
-                
-                poljeOdlazak.min = sutradan;
-                
-                // Reset invalid departure field if previously picked ahead of arrival
-                if (poljeOdlazak.value && poljeOdlazak.value < sutradan) {
-                    poljeOdlazak.value = '';
-                }
-            }
+        function lokalniDatum(d) {
+            const p = n => String(n).padStart(2, '0');
+            return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
         }
 
-        // Filters out letters and invalid characters dynamically as user types
+        document.addEventListener('DOMContentLoaded', function() {
+            const dol = document.getElementById('dolazak');
+            const odl = document.getElementById('odlazak');
+            if (!dol || !odl) return;
+
+            if (typeof flatpickr === 'undefined') {
+                // Fallback if the library fails to load: plain date inputs
+                const danas = lokalniDatum(new Date());
+                dol.min = danas; odl.min = danas;
+                dol.addEventListener('change', function() {
+                    if (!dol.value) return;
+                    const d = new Date(dol.value + 'T00:00:00');
+                    d.setDate(d.getDate() + 2);
+                    const min = lokalniDatum(d);
+                    odl.min = min;
+                    if (odl.value && odl.value < min) odl.value = '';
+                });
+                return;
+            }
+
+            const zajednicko = {
+                dateFormat: 'Y-m-d', altInput: true, altFormat: 'j M Y',
+                disable: ZAUZETI_TERMINI, disableMobile: true, monthSelectorType: 'static'
+            };
+            const odlazakPicker = flatpickr(odl, Object.assign({}, zajednicko, { minDate: new Date().fp_incr(2) }));
+            flatpickr(dol, Object.assign({}, zajednicko, {
+                minDate: 'today',
+                onChange: function(izabrano) {
+                    if (!izabrano[0]) return;
+                    const minOdl = izabrano[0].fp_incr(2);
+                    odlazakPicker.set('minDate', minOdl);
+                    const trenutni = odlazakPicker.selectedDates[0];
+                    if (trenutni && trenutni < minOdl) odlazakPicker.clear();
+                    odlazakPicker.open();
+                }
+            }));
+        });
+
+        // Removes letters from the phone field while typing
         function checkPhone(input) {
             input.value = input.value.replace(/[^0-9+\s\-]/g, '');
         }
 
-        // Main Form Interceptor: Handles data integrity, submission throttling, and honeypots
         function validirajDatume(event) {
-            // 1. BOT PROTECTION (Honeypot)
+            // 1. Honeypot (bot protection)
             const zamka = document.getElementById('praznoPolje');
-            if (zamka && zamka.value !== "") {
-                event.preventDefault(); // Silently block form submission if hidden input is filled
-                return false;
-            }
+            if (zamka && zamka.value !== '') { event.preventDefault(); return false; }
 
-            // 2. RATE LIMITING (Max 1 inquiry submission every 5 minutes)
-            const poslednjeSlanje = localStorage.getItem('vremePoslednjegUpita');
-            const sada = new Date().getTime();
-            const petMinuta = 5 * 60 * 1000; // 5 minutes in milliseconds
-
-            if (poslednjeSlanje && (sada - poslednjeSlanje < petMinuta)) {
-                const preostaloSekundi = Math.ceil((petMinuta - (sada - poslednjeSlanje)) / 1000);
-                alert(`Your booking inquiry has already been received. Please wait another ${preostaloSekundi} seconds before sending another request.`);
+            // 2. One inquiry per 5 minutes
+            const sada = Date.now();
+            const pauza = 5 * 60 * 1000;
+            let poslednje = 0;
+            try { poslednje = parseInt(localStorage.getItem('vremePoslednjegUpita'), 10) || 0; } catch (e) {}
+            if (poslednje && (sada - poslednje < pauza)) {
+                const s = Math.ceil((pauza - (sada - poslednje)) / 1000);
+                alert(`Your booking inquiry has already been received. Please wait another ${s} seconds before sending another request.`);
                 event.preventDefault();
                 return false;
             }
 
-            // 3. DATE LOGIC VALIDATION
-            const poljeDolazak = document.getElementById('dolazak');
-            const poljeOdlazak = document.getElementById('odlazak');
-            
-            if (poljeDolazak && poljeOdlazak) {
-                const datumDolaska = new Date(poljeDolazak.value);
-                const datumOdlaska = new Date(poljeOdlazak.value);
-                
-                if (datumOdlaska <= datumDolaska) {
-                    alert("Error: The departure date cannot be earlier than or equal to the arrival date!");
-                    event.preventDefault(); // Stop submission process
-                    return false;
-                }
+            // 3. Dates and minimum 2 nights
+            const dol = document.getElementById('dolazak');
+            const odl = document.getElementById('odlazak');
+            if (!dol.value || !odl.value) {
+                alert("Please select both an arrival and a departure date.");
+                event.preventDefault();
+                return false;
+            }
+            const noci = Math.round((new Date(odl.value + 'T00:00:00') - new Date(dol.value + 'T00:00:00')) / 86400000);
+            if (noci < 2) {
+                alert("The minimum stay is 2 nights. The departure date must be at least 2 days after arrival.");
+                event.preventDefault();
+                return false;
             }
 
-            // Timestamp successful request, then dispatch form safely
-            localStorage.setItem('vremePoslednjegUpita', sada);
+            // 4. Capacity of a single apartment (4 guests)
+            const izbor = document.getElementById('smeštajSelektor').value;
+            const gostiju = (parseInt(document.getElementById('odrasli').value, 10) || 0) + (parseInt(document.getElementById('deca').value, 10) || 0);
+            if (['plavi', 'zeleni', 'zuti'].includes(izbor) && gostiju > 4) {
+                alert("A single apartment sleeps up to 4 guests. Please choose \"Entire Complex\" or \"Any available apartment\".");
+                event.preventDefault();
+                return false;
+            }
+
+            try { localStorage.setItem('vremePoslednjegUpita', String(sada)); } catch (e) {}
             return true;
         }
+
+        // Mobile menu
+        function toggleMobileMenu() {
+            const m = document.getElementById('mobileMenu');
+            const b = document.getElementById('menuBtn');
+            const i = document.getElementById('menuIcon');
+            if (!m || !b || !i) return;
+            const otvoren = m.classList.toggle('hidden') === false;
+            b.setAttribute('aria-expanded', String(otvoren));
+            i.className = otvoren ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+
+        // Esc also closes the apartment modal
+        document.addEventListener('keydown', function(e) {
+            if (e.key !== 'Escape') return;
+            const m = document.getElementById('apartmentModal');
+            if (m && !m.classList.contains('invisible')) closeModal();
+        });
+
+        // Swipe in the yard gallery
+        (function() {
+            const lb = document.getElementById('yardLightbox');
+            if (!lb) return;
+            let x0 = null;
+            lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+            lb.addEventListener('touchend', e => {
+                if (x0 === null) return;
+                const dx = e.changedTouches[0].clientX - x0;
+                if (Math.abs(dx) > 50) changeLightboxImg(dx < 0 ? 1 : -1);
+                x0 = null;
+            });
+        })();
+
+        // =========================================================================
+        // --- PRICE ESTIMATE ---
+        // =========================================================================
+        const CENE_PO_NOCI = { 1: 60, 2: 60, 3: 70, 4: 80 };   // € per apartment per night
+        const POPUST_DUZI_BORAVAK = 0.15;                       // 15%
+        const MIN_NOCI_ZA_POPUST = 5;
+        const DECA_SE_RACUNAJU = true;                          // false = adults only
+
+        function racunajCenu() {
+            const box = document.getElementById('procenaCene');
+            const dol = document.getElementById('dolazak');
+            const odl = document.getElementById('odlazak');
+            if (!box || !dol || !odl) return;
+
+            const T = {
+                start: 'Select arrival and departure dates to see an estimated price.',
+                min: 'The minimum stay is 2 nights.',
+                kompleks: 'The price for the entire complex is arranged individually. We will send you an offer in our reply.',
+                vise: 'For more than 4 guests, more than one apartment is needed. We will confirm the price in our reply.',
+                noci: n => `${n} night${n > 1 ? 's' : ''}`,
+                popust: 'Long-stay discount (-15%)',
+                ukupno: 'Estimated total',
+                napomena: 'Estimated price. The final price is confirmed in our reply.'
+            };
+
+            if (!dol.value || !odl.value) {
+                box.innerHTML = T.start;
+                box.classList.remove('hidden');
+                return;
+            }
+            const noci = Math.round((new Date(odl.value + 'T00:00:00') - new Date(dol.value + 'T00:00:00')) / 86400000);
+            if (noci < 1) { box.innerHTML = T.start; box.classList.remove('hidden'); return; }
+
+            const odrasli = parseInt(document.getElementById('odrasli').value, 10) || 0;
+            const deca = parseInt(document.getElementById('deca').value, 10) || 0;
+            const gostiju = Math.max(1, odrasli + (DECA_SE_RACUNAJU ? deca : 0));
+            const izbor = document.getElementById('smeštajSelektor').value;
+
+            let html;
+            if (noci < 2) {
+                html = `<p class="font-medium">${T.min}</p>`;
+            } else if (izbor === 'ceo-kompleks') {
+                html = `<p>${T.kompleks}</p>`;
+            } else if (gostiju > 4) {
+                html = `<p>${T.vise}</p>`;
+            } else {
+                const poNoci = CENE_PO_NOCI[gostiju];
+                const osnovno = poNoci * noci;
+                const popust = noci >= MIN_NOCI_ZA_POPUST ? Math.round(osnovno * POPUST_DUZI_BORAVAK) : 0;
+                const ukupno = osnovno - popust;
+                html = `<div class="flex justify-between"><span>${poNoci} € × ${T.noci(noci)}</span><span>${osnovno} €</span></div>`;
+                if (popust) html += `<div class="flex justify-between text-emerald-700"><span>${T.popust}</span><span>-${popust} €</span></div>`;
+                html += `<div class="flex justify-between font-bold text-base mt-2 pt-2 border-t border-kucerak-moss/30"><span>${T.ukupno}</span><span>${ukupno} €</span></div>`;
+                html += `<p class="text-xs text-kucerak-olive/60 mt-2">${T.napomena}</p>`;
+            }
+            box.innerHTML = html;
+            box.classList.remove('hidden');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            ['dolazak', 'odlazak'].forEach(id => document.getElementById(id).addEventListener('change', racunajCenu));
+            ['odrasli', 'deca'].forEach(id => document.getElementById(id).addEventListener('input', racunajCenu));
+            document.getElementById('smeštajSelektor').addEventListener('change', racunajCenu);
+            racunajCenu();
+        });
     </script>
 </body>
 </html>
