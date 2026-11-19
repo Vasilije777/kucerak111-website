@@ -43,6 +43,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
     <!-- Engleska lokalizacija za kalendar je automatski ugrađena u flatpickr -->
+
+    <!-- TODO: zameni tvojdomen.com pravim domenom (pretraga i zamena u sva 4 fajla) -->
+    <link rel="canonical" href="https://tvojdomen.com/en.html">
+    <link rel="alternate" hreflang="sr" href="https://tvojdomen.com/">
+    <link rel="alternate" hreflang="en" href="https://tvojdomen.com/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://tvojdomen.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tvojdomen.com/en.html">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Kućerak 111", "description": "Kućerak 111 apartments in Vrdnik: private pool, yard and the peace of Fruška Gora.", "url": "https://tvojdomen.com/en.html", "telephone": "+381652716277", "image": "https://tvojdomen.com/slike/IMG_5951.jpg", "priceRange": "60-80 EUR", "address": {"@type": "PostalAddress", "streetAddress": "Vojvođanske brigade 93", "addressLocality": "Vrdnik", "addressCountry": "RS"}, "checkinTime": "14:00", "checkoutTime": "10:00", "petsAllowed": true, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Swimming pool", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true}], "sameAs": ["https://www.instagram.com/kucerak111/", "https://www.facebook.com/kucerak111/", "https://www.tiktok.com/@kucerak111"]}</script>
+    <style>html { scroll-padding-top: 5rem; }</style>
 </head>
 <body class="bg-kucerak-beige text-kucerak-dark font-sans antialiased">
 
@@ -64,13 +76,13 @@
                     <a href="#apartmani" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Apartments</a>
                     <a href="#sadrzaj" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Yard & Pool</a>
                     <a href="#cene-pravila" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Prices</a>
-                    <a href="#prosolve" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Events</a>
+                    <a href="#proslave" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Events</a>
                     <a href="#lokacija" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">About Vrdnik</a>
                     <a href="#faq" class="text-kucerak-olive hover:text-kucerak-moss font-medium transition whitespace-nowrap mr-8 xl:mr-12">FAQ</a>
                 </div>
 
                 <!-- DESNA STRANA: AKCIJE (Sa elegantnom vertikalnom linijom ispred telefona) -->
-                <div class="flex items-center space-x-3 xl:space-x-4 flex-shrink-0 justify-end">
+                <div class="flex items-center space-x-3 xl:space-x-4 flex-shrink-0 justify-end ml-auto">
                     <a href="tel:+381652716277" class="hidden xl:inline-block text-kucerak-olive font-medium text-xs tracking-wider uppercase hover:text-kucerak-moss transition whitespace-nowrap border-l border-kucerak-sand/60 pl-6 h-5 flex items-center">
                         <i class="fa-solid fa-phone mr-2"></i> +381 65 2716277
                     </a>
@@ -78,6 +90,9 @@
                         Book Now
                     </a>
                     
+                    <button id="menuBtn" type="button" onclick="toggleMobileMenu()" aria-label="Menu" aria-expanded="false" aria-controls="mobileMenu" class="lg:hidden w-10 h-10 flex items-center justify-center text-kucerak-olive text-xl">
+                        <i id="menuIcon" class="fa-solid fa-bars"></i>
+                    </button>
                     <!-- LANGUAGE SELECTOR WITH FLAGS -->
                     <div class="hidden md:flex items-center space-x-2 border-l border-kucerak-sand pl-3 h-6">
                         <a href="index.html" class="w-4 h-4 rounded-full overflow-hidden shadow-sm border border-transparent hover:border-kucerak-olive transition duration-300 opacity-50 hover:opacity-100 flex-shrink-0" title="Srpski">
@@ -92,6 +107,25 @@
 
             </div>
         </div>
+    
+    <!-- MOBILNI MENI -->
+    <div id="mobileMenu" class="hidden lg:hidden border-t border-kucerak-sand bg-kucerak-beige/95 backdrop-blur-md">
+        <div class="px-4 py-3 flex flex-col text-sm font-medium tracking-widest uppercase">
+            <a href="#pocetna" onclick="toggleMobileMenu()" class="py-3 text-kucerak-olive hover:text-kucerak-moss border-b border-kucerak-sand/60">Home</a>
+            <a href="#apartmani" onclick="toggleMobileMenu()" class="py-3 text-kucerak-olive hover:text-kucerak-moss border-b border-kucerak-sand/60">Apartments</a>
+            <a href="#sadrzaj" onclick="toggleMobileMenu()" class="py-3 text-kucerak-olive hover:text-kucerak-moss border-b border-kucerak-sand/60">Yard &amp; Pool</a>
+            <a href="#cene-pravila" onclick="toggleMobileMenu()" class="py-3 text-kucerak-olive hover:text-kucerak-moss border-b border-kucerak-sand/60">Prices</a>
+            <a href="#proslave" onclick="toggleMobileMenu()" class="py-3 text-kucerak-olive hover:text-kucerak-moss border-b border-kucerak-sand/60">Events</a>
+            <a href="#lokacija" onclick="toggleMobileMenu()" class="py-3 text-kucerak-olive hover:text-kucerak-moss border-b border-kucerak-sand/60">About Vrdnik</a>
+            <a href="#faq" onclick="toggleMobileMenu()" class="py-3 text-kucerak-olive hover:text-kucerak-moss border-b border-kucerak-sand/60">FAQ</a>
+            <div class="flex items-center justify-between pt-4">
+                <a href="tel:+381652716277" class="text-kucerak-olive"><i class="fa-solid fa-phone mr-2"></i> +381 65 2716277</a>
+                <a href="index.html" class="flex items-center gap-2 text-kucerak-olive" title="Srpski">
+                    <img src="https://flagcdn.com/w40/rs.png" alt="" class="w-5 h-5 rounded-full object-cover"> Srpski
+                </a>
+            </div>
+        </div>
+    </div>
     </nav>
 
     <!-- HERO SECTION WITH NEW FOREST BACKGROUND -->
@@ -139,7 +173,7 @@
                     <i class="fa-solid fa-paw text-3xl text-kucerak-sand mb-3"></i>
                     <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Pet-Friendly</h3>
                 </div>
-                    <div class="col-span-2 md:col-span-1">
+                <div class="col-span-2 md:col-span-1">
                     <i class="fa-solid fa-square-parking text-3xl text-kucerak-sand mb-3"></i>
                     <h3 class="font-medium text-sm sm:text-base uppercase tracking-wider">Parking</h3>
                 </div>
@@ -152,7 +186,7 @@
         <div class="text-center mb-16">
             <span class="text-kucerak-moss font-semibold uppercase tracking-wider text-sm">Accommodation</span>
             <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-kucerak-dark">Our Apartments</h2>
-            <p class="text-kucerak-olive/70 mt-4 max-w-xl mx-auto">Three identical, modernly equipped two-room apartments of 35 m² each, ready to comfortably host up to 4 adults.</p>
+            <p class="text-kucerak-olive/70 mt-4 max-w-xl mx-auto">Three identical, modernly equipped two-room apartments of 35 m² each, ready to comfortably host up to 4 guests (with a cot, a fifth guest can be a baby).</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -161,7 +195,7 @@
                 <div class="relative h-64 bg-gray-200 overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
                     <span class="absolute top-4 left-4 bg-blue-600 text-white text-xs uppercase tracking-widest px-3 py-1 font-semibold rounded z-20">Blue Apartment</span>
-                    <img src="slike/IMG_5941.jpg" alt="Blue Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    <img loading="lazy" decoding="async" src="slike/IMG_5941.jpg" alt="Blue Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
@@ -169,7 +203,7 @@
                         <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-users mr-1"></i> Up to 4 guests</span>
                     </div>
                     <h3 class="font-serif text-xl font-bold text-kucerak-dark mb-2">Blue Comfort</h3>
-                    <p class="text-sm text-kucerak-olive/80 mb-6 font-light">Separate bedroom with a double bed, a living room with a cozy sofa bed, fully equipped kitchen, and a private terrace.</p>
+                    <p class="text-sm text-kucerak-olive/80 mb-6 font-light">Separate bedroom with a double bed, a living room with a corner sofa, fully equipped kitchen, and a private terrace.</p>
                     <button onclick="openModal('plavi')" class="w-full py-3 bg-kucerak-sand hover:bg-kucerak-olive hover:text-kucerak-beige text-kucerak-olive font-semibold rounded text-sm uppercase tracking-wider transition">View Details</button>
                 </div>
             </div>
@@ -179,7 +213,7 @@
                 <div class="relative h-64 bg-gray-200 overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
                     <span class="absolute top-4 left-4 bg-emerald-700 text-white text-xs uppercase tracking-widest px-3 py-1 font-semibold rounded z-20">Green Apartment</span>
-                    <img src="slike/IMG_5959.jpg" alt="Green Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    <img loading="lazy" decoding="async" src="slike/IMG_5959.jpg" alt="Green Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
@@ -197,7 +231,7 @@
                 <div class="relative h-64 bg-gray-200 overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent z-10"></div>
                     <span class="absolute top-4 left-4 bg-amber-500 text-white text-xs uppercase tracking-widest px-3 py-1 font-semibold rounded z-20">Yellow Apartment</span>
-                    <img src="slike/IMG_5966.jpg" alt="Yellow Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
+                    <img loading="lazy" decoding="async" src="slike/IMG_5966.jpg" alt="Yellow Apartment" class="object-cover w-full h-full group-hover:scale-105 transition duration-500">
                 </div>
                 <div class="p-6">
                     <div class="flex items-center justify-between mb-4">
@@ -205,7 +239,7 @@
                         <span class="text-sm font-medium text-kucerak-moss"><i class="fa-solid fa-users mr-1"></i> Up to 4 guests</span>
                     </div>
                     <h3 class="font-serif text-xl font-bold text-kucerak-dark mb-2">Yellow Warmth</h3>
-                    <p class="text-sm text-kucerak-olive/80 mb-6 font-light">An exceptionally bright, sunlit apartment with a beautiful balcony. Perfect for enjoying morning coffee to the sound of birds.</p>
+                    <p class="text-sm text-kucerak-olive/80 mb-6 font-light">An exceptionally bright, sunlit apartment with a beautiful terrace. Perfect for enjoying morning coffee to the sound of birds.</p>
                     <button onclick="openModal('zuti')" class="w-full py-3 bg-kucerak-sand hover:bg-kucerak-olive hover:text-kucerak-beige text-kucerak-olive font-semibold rounded text-sm uppercase tracking-wider transition">View Details</button>
                 </div>
             </div>
@@ -258,13 +292,13 @@
                 <div class="relative rounded-xl overflow-hidden border border-kucerak-sand/40 shadow-lg h-[450px] bg-kucerak-dark group cursor-pointer" onclick="openYardLightbox()">
                     <div id="yardSlider" class="flex w-full h-full transition-transform duration-700 ease-in-out">
                         <div class="min-w-full h-full flex-shrink-0">
-                            <img src="slike/IMG_5951.jpg" alt="Yard" class="w-full h-full object-cover">
+                            <img loading="lazy" decoding="async" src="slike/IMG_5951.jpg" alt="Yard" class="w-full h-full object-cover">
                         </div>
                         <div class="min-w-full h-full flex-shrink-0">
-                            <img src="slike/289450498_Kucerak111IMG20210525171705jpg" alt="Pool" class="w-full h-full object-cover">
+                            <img loading="lazy" decoding="async" src="slike/289450498_Kucerak111IMG20210525171705jpg" alt="Pool" class="w-full h-full object-cover">
                         </div>
                         <div class="min-w-full h-full flex-shrink-0">
-                            <img src="slike/541740150_Kucerak111IMG19965a791baeb20273364d9553269f47Vjpg" alt="Summer House" class="w-full h-full object-cover">
+                            <img loading="lazy" decoding="async" src="slike/541740150_Kucerak111IMG19965a791baeb20273364d9553269f47Vjpg" alt="Summer House" class="w-full h-full object-cover">
                         </div>
                     </div>
                     
@@ -288,7 +322,7 @@
             <div class="text-center mb-16">
                 <span class="text-kucerak-moss font-semibold uppercase tracking-wider text-sm">Information</span>
                 <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 text-kucerak-dark">Rates & Stay</h2>
-                <p class="text-kucerak-olive/70 mt-4 max-w-xl mx-auto">Transparent pricing with no hidden costs. Review our seasonal rates and flexible house rules below.</p>
+                <p class="text-kucerak-olive/70 mt-4 max-w-xl mx-auto">Transparent pricing with no hidden costs. Review our rates and flexible house rules below.</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
@@ -325,11 +359,11 @@
 
                     <div class="mt-8 bg-kucerak-sand/50 border border-dashed border-kucerak-moss/40 p-4 rounded-lg flex items-center gap-4">
                         <div class="bg-kucerak-moss text-kucerak-beige w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 text-lg font-bold">
-                            -15%
+                            <i class="fa-solid fa-percent"></i>
                         </div>
                         <div>
                             <h4 class="font-bold text-kucerak-dark text-sm uppercase tracking-wider">Long-stay discount!</h4>
-                            <p class="text-xs text-kucerak-olive/80 mt-0.5">For all bookings of 5 or more nights, we automatically apply a 15% discount to the total price.</p>
+                            <p class="text-xs text-kucerak-olive/80 mt-0.5">For stays of 7 or more nights, we automatically apply a discount to the total price: 10% for 1–2 guests and 15% for 3–4 guests.</p>
                         </div>
                     </div>
                 </div>
@@ -373,7 +407,7 @@
                         <div>
                             <h4 class="font-bold text-kucerak-dark mb-1">Minimum Stay</h4>
                             <p class="text-sm text-kucerak-olive/80 leading-relaxed font-light">
-                                To fully immerse yourself in the tranquility and recharge your batteries in Fruška Gora, the minimum reservation length is **2 nights**.
+                                To fully immerse yourself in the tranquility and recharge your batteries in Fruška Gora, the minimum reservation length is <strong>2 nights</strong>.
                             </p>
                         </div>
                     </div>
@@ -383,13 +417,13 @@
     </section>
 
     <!-- PROSLAVE & GRUPE (EVENTS & GROUPS) -->
-    <section id="prosolve" class="py-24 bg-kucerak-dark text-kucerak-beige relative overflow-hidden">
+    <section id="proslave" class="py-24 bg-kucerak-dark text-kucerak-beige relative overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center opacity-10"></div>
         <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
             <span class="text-kucerak-sand uppercase tracking-wider text-xs sm:text-sm font-semibold">Exclusive Property Rental</span>
             <h2 class="font-serif text-3xl sm:text-5xl font-bold mt-2 mb-6">Planning a birthday, team building, bachelor or bachelorette party?</h2>
             <p class="text-kucerak-sand/80 max-w-2xl mx-auto mb-8 font-light leading-relaxed">
-                Rent all three apartments at once and enjoy **complete privacy of the entire complex**. All accommodation capacities (up to 12 overnight guests total), the swimming pool, summer house, and the entire yard will be reserved exclusively for your group.
+                Rent all three apartments at once and enjoy <strong>complete privacy of the entire complex</strong>. All accommodation capacities (up to 12 overnight guests total), the swimming pool, summer house, and the entire yard will be reserved exclusively for your group.
             </p>
             <a href="#rezervacija" onclick="selectTeambuilding()" class="inline-block bg-kucerak-sand text-kucerak-dark px-8 py-4 rounded-md font-semibold tracking-wider uppercase text-sm hover:bg-white transition shadow-lg">
                 Send Group Inquiry
@@ -472,7 +506,7 @@
                 <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
                     <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">What is the minimum stay requirement?</h4>
                     <p class="text-sm text-kucerak-olive/80 leading-relaxed">
-                        The minimum stay in our apartments is 2 nights. For longer stays (5 or more nights), we automatically apply a 15% discount to your total booking amount.
+                        The minimum stay in our apartments is 2 nights. For longer stays (7 or more nights), we automatically apply a discount to your total booking amount: 10% for 1–2 guests and 15% for 3–4 guests.
                     </p>
                 </div>
 
@@ -499,11 +533,27 @@
                         Absolutely! All our apartments are fully air-conditioned, and the entire complex (including the yard and summer house) is covered by fast, free Wi-Fi, allowing you to enjoy your stay seamlessly.
                     </p>
                 </div>
+
+                <!-- Question 7 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">Is there parking for guests?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        Yes, parking spaces for guests' cars are available on the property. <!-- TODO: add number of spaces, free or paid -->
+                    </p>
+                </div>
+
+                <!-- Question 8 -->
+                <div class="bg-kucerak-beige/40 p-6 rounded-lg border border-kucerak-sand/60">
+                    <h4 class="font-serif text-lg font-bold text-kucerak-dark mb-2">How is the price calculated for children?</h4>
+                    <p class="text-sm text-kucerak-olive/80 leading-relaxed">
+                        Children up to 7 years stay free of charge. For children aged 8 to 13 there is a surcharge of €5 per night, and children aged 14 and over are counted as adults. The children's ages are checked at check-in (ID, passport or another document of the child).
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <<!-- RESERVATION FORM -->
+    <!-- RESERVATION FORM -->
     <section id="rezervacija" class="bg-kucerak-sand py-24">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 bg-white p-8 sm:p-12 rounded-xl shadow-md border border-kucerak-sand">
             <div class="text-center mb-8">
@@ -513,19 +563,18 @@
 
             <form action="https://api.web3forms.com/submit" method="POST" id="bookingForm" class="space-y-6" onsubmit="return validirajDatume(event)">
 
-                <!-- Web3Forms configuration -->
+                <!-- Web3Forms -->
                 <input type="hidden" name="access_key" value="76202b6e-afe0-4e07-97ea-c0a5f796e3ab">
                 <input type="hidden" name="subject" value="Nova rezervacija sa sajta Kućerak 111">
                 <input type="hidden" name="from_name" value="Kućerak 111 Sajt">
                 <input type="hidden" name="redirect" value="hvala-en.html">
 
-                <!-- Anti-spam honeypot -->
+                <!-- Zamka za spam botove -->
                 <div style="display:none;" aria-hidden="true">
-                    <input type="text" id="praznoPolje" name="prazno_polje" value="" tabindex="-1" autocomplete="off">
+                    <input type="text" id="praznoPolje" value="" tabindex="-1" autocomplete="off">
                     <input type="checkbox" name="botcheck" tabindex="-1">
                 </div>
 
-                <!-- Name and phone -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Full Name</label>
@@ -536,24 +585,21 @@
                         <input type="tel" name="Telefon" required pattern="[0-9+\s\-]+"
                             oninput="this.setCustomValidity(''); checkPhone(this);"
                             oninvalid="this.setCustomValidity('Wrong number format! Please enter a valid phone number (e.g., +381 65 2716277)')"
-                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm"
-                            placeholder="+381 65 2716277">
+                            class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="+381 65 2716277">
                     </div>
                 </div>
 
-                <!-- Dates -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Arrival Date</label>
-                        <input type="date" id="dolazak" placeholder="Select date" name="Dolazak" required class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
+                        <input type="date" id="dolazak" name="Dolazak" required placeholder="Select date" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Departure Date</label>
-                        <input type="date" id="odlazak" placeholder="Select date" name="Odlazak" required class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
+                        <input type="date" id="odlazak" name="Odlazak" required placeholder="Select date" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm text-kucerak-dark">
                     </div>
                 </div>
 
-                <!-- Guests, e-mail, pet -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Number of adults</label>
@@ -561,18 +607,26 @@
                     </div>
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Number of children</label>
-                        <input type="number" id="deca" name="Broj dece" min="0" max="8" value="0" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm">
+                        <input type="number" id="deca" name="Broj dece" min="0" max="6" value="0" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm">
                     </div>
                     <div>
                         <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">E-mail (optional)</label>
                         <input type="email" name="email" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="name@example.com">
                     </div>
                 </div>
+
+                <!-- Uzrast dece (pravi JavaScript) -->
+                <div id="uzrastDece" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></div>
+
                 <label class="flex items-center gap-3 text-sm text-kucerak-olive cursor-pointer">
                     <input type="checkbox" name="Ljubimac" value="Da" class="w-4 h-4" style="accent-color:#556B2F;"> I am traveling with a pet
                 </label>
 
-                <!-- Accommodation -->
+                <div class="sm:w-1/3">
+                    <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Number of cars (optional)</label>
+                    <input type="number" name="Broj automobila" min="0" max="6" value="1" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm">
+                </div>
+
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Select Accommodation</label>
                     <select id="smeštajSelektor" name="Izabrani Smeštaj" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm cursor-pointer" style="min-height: 46px;">
@@ -580,20 +634,21 @@
                         <option value="plavi">Blue Apartment</option>
                         <option value="zeleni">Green Apartment</option>
                         <option value="zuti">Yellow Apartment</option>
+                        <option value="dva-apartmana">Two apartments (any two available)</option>
                         <option value="ceo-kompleks">Entire Complex (All 3 apartments)</option>
                     </select>
+                    <p id="smestajNapomena" class="hidden text-xs text-kucerak-moss mt-2"></p>
                 </div>
 
-                <!-- Notes -->
                 <div>
                     <label class="block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2">Special Requests / Notes</label>
                     <textarea name="Napomena" rows="3" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="e.g. Traveling with pets, baby cot needed, event organization details..."></textarea>
                 </div>
 
-                <!-- Price estimate (filled by JavaScript) -->
+                <!-- Procena cene (popunjava JavaScript) -->
                 <div id="procenaCene" class="bg-kucerak-sand/50 border border-dashed border-kucerak-moss/40 rounded-lg p-4 text-sm text-kucerak-olive" aria-live="polite">Select arrival and departure dates to see an estimated price.</div>
                 <input type="hidden" id="procenjenaCena" name="Procenjena cena" value="">
-                <!-- Submit -->
+
                 <div class="pt-2 flex justify-center">
                     <button type="submit" class="w-full sm:w-auto px-12 py-3.5 bg-kucerak-olive hover:bg-kucerak-moss text-kucerak-beige font-bold uppercase tracking-widest text-sm rounded transition shadow-md">
                         Send Booking Inquiry
@@ -660,7 +715,7 @@
             
             <!-- INTEGRATED MODAL GALLERY -->
             <div class="relative h-64 sm:h-80 bg-gray-900">
-                <button onclick="closeModal()" class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition">
+                <button onclick="closeModal()" aria-label="Close" class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
                 
@@ -708,12 +763,12 @@
 
     <!-- YARD / TIMELINES GALLERY LIGHTBOX -->
     <div id="yardLightbox" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
-        <button onclick="closeYardLightbox()" class="absolute top-6 right-6 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition">
+        <button onclick="closeYardLightbox()" aria-label="Close" class="absolute top-6 right-6 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition">
             <i class="fa-solid fa-xmark text-xl"></i>
         </button>
         
         <!-- Left arrow -->
-        <button onclick="changeLightboxImg(-1)" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
+        <button onclick="changeLightboxImg(-1)" aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
             <i class="fa-solid fa-chevron-left text-lg"></i>
         </button>
 
@@ -723,7 +778,7 @@
         </div>
 
         <!-- Right arrow -->
-        <button onclick="changeLightboxImg(1)" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
+        <button onclick="changeLightboxImg(1)" aria-label="Next image" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
             <i class="fa-solid fa-chevron-right text-lg"></i>
         </button>
         
@@ -904,11 +959,23 @@
             if (selector) selector.value = 'ceo-kompleks';
         }
 
-                // =========================================================================
-        // --- DATES (flatpickr), PHONE, FORM VALIDATION, MENU ---
+const MSG = (document.documentElement.lang === 'en') ? {
+            wait: s => `Your booking inquiry has already been received. Please wait another ${s} seconds before sending another request.`,
+            dates: "Please select both an arrival and a departure date.",
+            min: "The minimum stay is 2 nights. The departure date must be at least 2 days after arrival.",
+            cap: "A single apartment sleeps up to 4 guests (a fifth guest can only be a baby in a cot). Please choose two apartments or the entire complex."
+        } : {
+            wait: s => `Vaš upit je već uspešno primljen. Molimo vas sačekajte još ${s} sekundi pre slanja sledeće poruke.`,
+            dates: "Molimo izaberite datum dolaska i datum odlaska.",
+            min: "Minimalan boravak je 2 noćenja. Datum odlaska mora biti najmanje 2 dana posle dolaska.",
+            cap: "U jednom apartmanu može da boravi do 4 osobe (peti gost može biti samo beba u krevecu). Izaberite dva apartmana ili ceo kompleks."
+        };
+
+        // =========================================================================
+        // --- DATUMI (flatpickr), TELEFON, VALIDACIJA FORME, MENI ---
         // =========================================================================
 
-        // Booked dates: e.g. ["2026-12-24", {from: "2026-12-30", to: "2027-01-02"}]
+        // Zauzeti termini: npr. ["2026-12-24", {from: "2026-12-30", to: "2027-01-02"}]
         const ZAUZETI_TERMINI = [];
 
         function lokalniDatum(d) {
@@ -922,7 +989,7 @@
             if (!dol || !odl) return;
 
             if (typeof flatpickr === 'undefined') {
-                // Fallback if the library fails to load: plain date inputs
+                // Rezerva ako se biblioteka ne učita: obični date input
                 const danas = lokalniDatum(new Date());
                 dol.min = danas; odl.min = danas;
                 dol.addEventListener('change', function() {
@@ -936,8 +1003,10 @@
                 return;
             }
 
+            const en = document.documentElement.lang === 'en';
+            const jezik = (!en && flatpickr.l10ns && flatpickr.l10ns.sr) ? flatpickr.l10ns.sr : 'default';
             const zajednicko = {
-                dateFormat: 'Y-m-d', altInput: true, altFormat: 'j M Y',
+                locale: jezik, dateFormat: 'Y-m-d', altInput: true, altFormat: en ? 'j M Y' : 'd.m.Y.',
                 disable: ZAUZETI_TERMINI, disableMobile: true, monthSelectorType: 'static'
             };
             const odlazakPicker = flatpickr(odl, Object.assign({}, zajednicko, { minDate: new Date().fp_incr(2) }));
@@ -954,59 +1023,47 @@
             }));
         });
 
-        // Removes letters from the phone field while typing
+        // Briše slova iz polja za telefon dok korisnik kuca
         function checkPhone(input) {
             input.value = input.value.replace(/[^0-9+\s\-]/g, '');
         }
 
         function validirajDatume(event) {
-            // 1. Honeypot (bot protection)
+            // 1. Honeypot (zaštita od botova)
             const zamka = document.getElementById('praznoPolje');
             if (zamka && zamka.value !== '') { event.preventDefault(); return false; }
 
-            // 2. One inquiry per 5 minutes
+            // 2. Jedan upit na 5 minuta
             const sada = Date.now();
             const pauza = 5 * 60 * 1000;
             let poslednje = 0;
-            const poljeCena = document.getElementById('procenjenaCena');
-            if (poljeCena) poljeCena.value = cenaZaMejl();
             try { poslednje = parseInt(localStorage.getItem('vremePoslednjegUpita'), 10) || 0; } catch (e) {}
             if (poslednje && (sada - poslednje < pauza)) {
-                const s = Math.ceil((pauza - (sada - poslednje)) / 1000);
-                alert(`Your booking inquiry has already been received. Please wait another ${s} seconds before sending another request.`);
+                alert(MSG.wait(Math.ceil((pauza - (sada - poslednje)) / 1000)));
                 event.preventDefault();
                 return false;
             }
 
-            // 3. Dates and minimum 2 nights
+            // 3. Datumi i minimum 2 noćenja
             const dol = document.getElementById('dolazak');
             const odl = document.getElementById('odlazak');
-            if (!dol.value || !odl.value) {
-                alert("Please select both an arrival and a departure date.");
-                event.preventDefault();
-                return false;
-            }
+            if (!dol.value || !odl.value) { alert(MSG.dates); event.preventDefault(); return false; }
             const noci = Math.round((new Date(odl.value + 'T00:00:00') - new Date(dol.value + 'T00:00:00')) / 86400000);
-            if (noci < 2) {
-                alert("The minimum stay is 2 nights. The departure date must be at least 2 days after arrival.");
-                event.preventDefault();
-                return false;
-            }
+            if (noci < 2) { alert(MSG.min); event.preventDefault(); return false; }
 
-            // 4. Capacity of a single apartment (4 guests)
+            // 4. Kapacitet jednog apartmana (4 osobe)
             const izbor = document.getElementById('smeštajSelektor').value;
-            const gostiju = (parseInt(document.getElementById('odrasli').value, 10) || 0) + (parseInt(document.getElementById('deca').value, 10) || 0);
-            if (['plavi', 'zeleni', 'zuti'].includes(izbor) && gostiju > 4) {
-                alert("A single apartment sleeps up to 4 guests. Please choose \"Entire Complex\" or \"Any available apartment\".");
-                event.preventDefault();
-                return false;
-            }
+            if (izbor !== 'ceo-kompleks' && !staje(gosti(), APARTMANI_PO_IZBORU[izbor] || 1)) { alert(MSG.cap); event.preventDefault(); return false; }
+
+            // 5. Cena ide u mejl
+            const poljeCena = document.getElementById('procenjenaCena');
+            if (poljeCena) poljeCena.value = cenaZaMejl();
 
             try { localStorage.setItem('vremePoslednjegUpita', String(sada)); } catch (e) {}
             return true;
         }
 
-        // Mobile menu
+        // Mobilni meni
         function toggleMobileMenu() {
             const m = document.getElementById('mobileMenu');
             const b = document.getElementById('menuBtn');
@@ -1017,14 +1074,14 @@
             i.className = otvoren ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
         }
 
-        // Esc also closes the apartment modal
+        // Esc zatvara i modal apartmana
         document.addEventListener('keydown', function(e) {
             if (e.key !== 'Escape') return;
             const m = document.getElementById('apartmentModal');
             if (m && !m.classList.contains('invisible')) closeModal();
         });
 
-        // Swipe in the yard gallery
+        // Prevlačenje prstom u galeriji dvorišta
         (function() {
             const lb = document.getElementById('yardLightbox');
             if (!lb) return;
@@ -1039,77 +1096,198 @@
         })();
 
         // =========================================================================
-        // --- PRICE ESTIMATE ---
+        // --- PROCENA CENE (uzrast dece, više apartmana, popust po broju osoba) ---
         // =========================================================================
-        const CENE_PO_NOCI = { 1: 60, 2: 60, 3: 70, 4: 80 };   // € per apartment per night
-        const POPUST_DUZI_BORAVAK = 0.15;              // 15%
-        const MIN_NOCI_ZA_POPUST = 5;
-        const DECA_SE_RACUNAJU = true;                 // false = adults only
+        const CENE_PO_NOCI = { 1: 60, 2: 60, 3: 70, 4: 80 };   // € po apartmanu po noći (odrasli + deca 14+)
+        const POPUST_OD_NOCI = 7;                               // popust važi od ovoliko noćenja
+        const POPUST_1_2_OSOBE = 0.10;                          // 10% za 1–2 osobe
+        const POPUST_3_4_OSOBE = 0.15;                          // 15% za 3–4 osobe
+        const BEBA_DO = 2;                                      // deca 0–2: beba u krevecu (ne zauzima ležaj)
+        const DECA_GRATIS_DO = 7;                               // deca do 7 god.: besplatno
+        const DECA_POPUST_DO = 13;                              // deca 8–13: doplata; 14–17: kao odrasli
+        const DOPLATA_DETE_POPUST = 5;                          // € po detetu po noći za uzrast 8–13 (PROMENI!)
+        const OSOBA_PO_APARTMANU = 4;                           // kapacitet jednog apartmana
+        const APARTMANI_PO_IZBORU = { 'bilo-koji': 1, 'plavi': 1, 'zeleni': 1, 'zuti': 1, 'dva-apartmana': 2, 'ceo-kompleks': 3 };
 
-        // Kratak tekst o ceni za mejl
-        function cenaZaMejl() {
-            const dol = document.getElementById('dolazak').value;
-            const odl = document.getElementById('odlazak').value;
-            if (!dol || !odl) return '';
-            const noci = Math.round((new Date(odl + 'T00:00:00') - new Date(dol + 'T00:00:00')) / 86400000);
-            const odrasli = parseInt(document.getElementById('odrasli').value, 10) || 0;
-            const deca = parseInt(document.getElementById('deca').value, 10) || 0;
-            const gostiju = Math.max(1, odrasli + (DECA_SE_RACUNAJU ? deca : 0));
-            const izbor = document.getElementById('smeštajSelektor').value;
+        // Pravi padajuće menije za uzrast, po jedan za svako dete
+        function osveziUzrasteDece() {
+            const kont = document.getElementById('uzrastDece');
+            if (!kont) return;
+            const en = document.documentElement.lang === 'en';
+            const n = Math.min(6, Math.max(0, parseInt(document.getElementById('deca').value, 10) || 0));
+            const stare = Array.from(kont.querySelectorAll('select')).map(s => s.value);
+            kont.innerHTML = '';
 
-            if (izbor === 'ceo-kompleks') return `po dogovoru (ceo kompleks, ${noci} noćenja)`;
-            if (gostiju > 4) return `po dogovoru (${gostiju} gostiju, više apartmana)`;
+            const grupe = [
+                { kat: 'beba',    vrednost: `0–${BEBA_DO} god.`,                              tekst: en ? `0–${BEBA_DO} years` : `0–${BEBA_DO} godine` },
+                { kat: 'gratis',  vrednost: `${BEBA_DO + 1}–${DECA_GRATIS_DO} god.`,          tekst: en ? `${BEBA_DO + 1}–${DECA_GRATIS_DO} years` : `${BEBA_DO + 1}–${DECA_GRATIS_DO} godina` },
+                { kat: 'popust',  vrednost: `${DECA_GRATIS_DO + 1}–${DECA_POPUST_DO} god.`,   tekst: en ? `${DECA_GRATIS_DO + 1}–${DECA_POPUST_DO} years` : `${DECA_GRATIS_DO + 1}–${DECA_POPUST_DO} godina` },
+                { kat: 'redovna', vrednost: `${DECA_POPUST_DO + 1}–17 god.`,                  tekst: en ? `${DECA_POPUST_DO + 1}–17 years` : `${DECA_POPUST_DO + 1}–17 godina` }
+            ];
 
-            const osnovno = CENE_PO_NOCI[gostiju] * noci;
-            const popust = noci >= MIN_NOCI_ZA_POPUST ? Math.round(osnovno * POPUST_DUZI_BORAVAK) : 0;
-            return `${osnovno - popust} € (${noci} noćenja` + (popust ? ', popust 15%' : '') + ')';
+            for (let i = 0; i < n; i++) {
+                const wrap = document.createElement('div');
+                const lbl = document.createElement('label');
+                lbl.className = 'block text-xs font-semibold uppercase tracking-wider text-kucerak-olive mb-2';
+                lbl.textContent = en ? `Child ${i + 1} – age` : `Dete ${i + 1} – uzrast`;
+                const sel = document.createElement('select');
+                sel.name = 'Dete ' + (i + 1) + ' uzrast';
+                sel.required = true;
+                sel.className = 'w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm cursor-pointer';
+                const ph = document.createElement('option');
+                ph.value = ''; ph.textContent = en ? 'Select' : 'Izaberite';
+                sel.appendChild(ph);
+                grupe.forEach(g => {
+                    const o = document.createElement('option');
+                    o.value = g.vrednost; o.textContent = g.tekst; o.dataset.kat = g.kat;
+                    sel.appendChild(o);
+                });
+                sel.value = stare[i] || '';
+                sel.addEventListener('change', racunajCenu);
+                wrap.appendChild(lbl); wrap.appendChild(sel);
+                kont.appendChild(wrap);
+            }
+            racunajCenu();
         }
 
+        // Broj gostiju po kategorijama
+        function gosti() {
+            const odrasli = parseInt(document.getElementById('odrasli').value, 10) || 0;
+            let bebe = 0, gratis = 0, popust = 0, redovna = 0, nepoznato = 0;
+            document.querySelectorAll('#uzrastDece select').forEach(s => {
+                const o = s.selectedOptions[0];
+                const kat = o ? o.dataset.kat : '';
+                if (!kat) nepoznato++;
+                else if (kat === 'beba') bebe++;
+                else if (kat === 'gratis') gratis++;
+                else if (kat === 'popust') popust++;
+                else redovna++;
+            });
+            return {
+                odrasli, bebe, gratis, popust, redovna, nepoznato,
+                placaju: odrasli + redovna,                                   // za tarifu 60/70/80 €
+                osoba: odrasli + redovna + popust,                            // za izbor popusta 10% / 15%
+                bezBebe: odrasli + redovna + popust + gratis                  // svi koji zauzimaju ležaj
+            };
+        }
+
+        // Da li gosti staju u n apartmana (4 po apartmanu; po jedna beba u krevecu po apartmanu ne računa se)
+        function staje(g, n) {
+            return g.bezBebe + Math.max(0, g.bebe - n) <= OSOBA_PO_APARTMANU * n;
+        }
+
+        // Koliko je apartmana najmanje potrebno (3 = ceo kompleks)
+        function potrebnoApartmana(g) {
+            for (let n = 1; n <= 3; n++) if (staje(g, n)) return n;
+            return 3;
+        }
+
+        // Onemogući izbore koji su premali i prebaci na odgovarajući
+        function uskladiSmestaj() {
+            const sel = document.getElementById('smeštajSelektor');
+            const nap = document.getElementById('smestajNapomena');
+            if (!sel || !sel.options) return;
+            const en = document.documentElement.lang === 'en';
+            const potrebno = potrebnoApartmana(gosti());
+
+            Array.from(sel.options).forEach(o => { o.disabled = (APARTMANI_PO_IZBORU[o.value] || 1) < potrebno; });
+            if ((APARTMANI_PO_IZBORU[sel.value] || 1) < potrebno) sel.value = potrebno === 2 ? 'dva-apartmana' : 'ceo-kompleks';
+
+            if (nap) {
+                if (potrebno === 2) nap.textContent = en ? 'For this number of guests at least 2 apartments are needed (one apartment sleeps 4; a fifth guest can only be a baby in a cot).' : 'Za ovaj broj gostiju potrebna su najmanje 2 apartmana (jedan apartman je za 4 osobe, a peti gost može biti samo beba u krevecu).';
+                else if (potrebno === 3) nap.textContent = en ? 'For this number of guests the entire complex (all 3 apartments) is needed.' : 'Za ovaj broj gostiju potreban je ceo kompleks (sva 3 apartmana).';
+                else nap.textContent = '';
+                nap.classList.toggle('hidden', potrebno === 1);
+            }
+        }
+
+        function tarifa(osoba) {
+            return CENE_PO_NOCI[Math.min(4, Math.max(1, osoba))];
+        }
+
+        // Jedan izvor istine za cenu (koriste je i prikaz i mejl)
+        function izracunajCenu() {
+            const dol = document.getElementById('dolazak').value;
+            const odl = document.getElementById('odlazak').value;
+            if (!dol || !odl) return { tip: 'start' };
+            const noci = Math.round((new Date(odl + 'T00:00:00') - new Date(dol + 'T00:00:00')) / 86400000);
+            if (noci < 1) return { tip: 'start' };
+            if (noci < 2) return { tip: 'min', noci };
+
+            const g = gosti();
+            if (g.nepoznato > 0) return { tip: 'uzrast', noci };
+            const izbor = document.getElementById('smeštajSelektor').value;
+            if (izbor === 'ceo-kompleks') return { tip: 'kompleks', noci };
+            const apt = APARTMANI_PO_IZBORU[izbor] || 1;
+            if (!staje(g, apt)) return { tip: 'vise', noci };
+
+            // Za 2 apartmana: plaćajuće osobe se dele što ravnomernije
+            const poNoci = apt === 2 ? tarifa(Math.ceil(g.placaju / 2)) + tarifa(Math.floor(g.placaju / 2)) : tarifa(g.placaju);
+            const osnovno = poNoci * noci;
+            const doplata = g.popust * DOPLATA_DETE_POPUST * noci;
+            const pre = osnovno + doplata;
+            const stopa = noci >= POPUST_OD_NOCI ? (g.osoba >= 3 ? POPUST_3_4_OSOBE : POPUST_1_2_OSOBE) : 0;
+            const popust = Math.round(pre * stopa);
+            return { tip: 'cena', noci, apt, g, poNoci, osnovno, doplata, popust, proc: Math.round(stopa * 100), ukupno: pre - popust };
+        }
+
+        // Kratak tekst o ceni za mejl (uvek na srpskom)
+        function cenaZaMejl() {
+            const r = izracunajCenu();
+            if (r.tip === 'start' || r.tip === 'uzrast') return '';
+            if (r.tip === 'min') return `ispod minimuma (${r.noci} noćenje)`;
+            if (r.tip === 'kompleks') return `po dogovoru (ceo kompleks, ${r.noci} noćenja)`;
+            if (r.tip === 'vise') return `po dogovoru (više apartmana, ${r.noci} noćenja)`;
+            return `${r.ukupno} € (` + (r.apt === 2 ? '2 apartmana, ' : '') + `${r.noci} noćenja` + (r.popust ? `, popust ${r.proc}%` : '') + ')';
+        }
+
+        // Prikaz cene gostu
         function racunajCenu() {
             const box = document.getElementById('procenaCene');
-            const dol = document.getElementById('dolazak');
-            const odl = document.getElementById('odlazak');
-            if (!box || !dol || !odl) return;
-
-            const T = {
+            if (!box) return;
+            uskladiSmestaj();
+            const en = document.documentElement.lang === 'en';
+            const T = en ? {
                 start: 'Select arrival and departure dates to see an estimated price.',
+                uzrast: "Select the children's age groups to see an estimated price.",
                 min: 'The minimum stay is 2 nights.',
                 kompleks: 'The price for the entire complex is arranged individually. We will send you an offer in our reply.',
-                vise: 'For more than 4 guests, more than one apartment is needed. We will confirm the price in our reply.',
+                vise: 'The selected accommodation cannot host this many guests. Please choose more apartments.',
+                dvaApt: '2 apartments',
                 noci: n => `${n} night${n > 1 ? 's' : ''}`,
-                popust: 'Long-stay discount (-15%)',
+                deca: (n, d, noci) => `Children aged ${DECA_GRATIS_DO + 1}–${DECA_POPUST_DO} (${n} × ${d} € × ${noci})`,
+                popust: p => `Long-stay discount (-${p}%)`,
                 ukupno: 'Estimated total',
-                napomena: 'Estimated price. The final price is confirmed in our reply.'
+                gratis: `Children up to ${DECA_GRATIS_DO} years stay free of charge.`,
+                napomena: "Estimated price. The final price is confirmed in our reply; the children's ages are verified at check-in."
+            } : {
+                start: 'Izaberite datume dolaska i odlaska da vidite okvirnu cenu.',
+                uzrast: 'Izaberite uzrast dece da vidite okvirnu cenu.',
+                min: 'Minimalan boravak je 2 noćenja.',
+                kompleks: 'Cena za ceo kompleks se dogovara individualno. Javićemo Vam se sa ponudom u odgovoru.',
+                vise: 'Izabrani smeštaj ne može da primi ovoliko gostiju. Izaberite više apartmana.',
+                dvaApt: '2 apartmana',
+                noci: n => `${n} ${n === 1 ? 'noćenje' : 'noćenja'}`,
+                deca: (n, d, noci) => `Deca ${DECA_GRATIS_DO + 1}–${DECA_POPUST_DO} god. (${n} × ${d} € × ${noci})`,
+                popust: p => `Popust na duži boravak (-${p}%)`,
+                ukupno: 'Okvirna cena ukupno',
+                gratis: `Deca do ${DECA_GRATIS_DO} godina borave besplatno.`,
+                napomena: 'Okvirna cena. Konačnu cenu potvrđujemo u odgovoru, a uzrast dece proveravamo pri prijavi gostiju.'
             };
 
-            if (!dol.value || !odl.value) {
-                box.innerHTML = T.start;
-                box.classList.remove('hidden');
-                return;
-            }
-            const noci = Math.round((new Date(odl.value + 'T00:00:00') - new Date(dol.value + 'T00:00:00')) / 86400000);
-            if (noci < 1) { box.innerHTML = T.start; box.classList.remove('hidden'); return; }
-
-            const odrasli = parseInt(document.getElementById('odrasli').value, 10) || 0;
-            const deca = parseInt(document.getElementById('deca').value, 10) || 0;
-            const gostiju = Math.max(1, odrasli + (DECA_SE_RACUNAJU ? deca : 0));
-            const izbor = document.getElementById('smeštajSelektor').value;
-
+            const r = izracunajCenu();
             let html;
-            if (noci < 2) {
-                html = `<p class="font-medium">${T.min}</p>`;
-            } else if (izbor === 'ceo-kompleks') {
-                html = `<p>${T.kompleks}</p>`;
-            } else if (gostiju > 4) {
-                html = `<p>${T.vise}</p>`;
-            } else {
-                const poNoci = CENE_PO_NOCI[gostiju];
-                const osnovno = poNoci * noci;
-                const popust = noci >= MIN_NOCI_ZA_POPUST ? Math.round(osnovno * POPUST_DUZI_BORAVAK) : 0;
-                const ukupno = osnovno - popust;
-                html = `<div class="flex justify-between"><span>${poNoci} € × ${T.noci(noci)}</span><span>${osnovno} €</span></div>`;
-                if (popust) html += `<div class="flex justify-between text-emerald-700"><span>${T.popust}</span><span>-${popust} €</span></div>`;
-                html += `<div class="flex justify-between font-bold text-base mt-2 pt-2 border-t border-kucerak-moss/30"><span>${T.ukupno}</span><span>${ukupno} €</span></div>`;
+            if (r.tip === 'start') html = T.start;
+            else if (r.tip === 'uzrast') html = `<p>${T.uzrast}</p>`;
+            else if (r.tip === 'min') html = `<p class="font-medium">${T.min}</p>`;
+            else if (r.tip === 'kompleks') html = `<p>${T.kompleks}</p>`;
+            else if (r.tip === 'vise') html = `<p>${T.vise}</p>`;
+            else {
+                html = `<div class="flex justify-between"><span>${r.apt === 2 ? T.dvaApt + ': ' : ''}${r.poNoci} € × ${T.noci(r.noci)}</span><span>${r.osnovno} €</span></div>`;
+                if (r.doplata) html += `<div class="flex justify-between"><span>${T.deca(r.g.popust, DOPLATA_DETE_POPUST, r.noci)}</span><span>${r.doplata} €</span></div>`;
+                if (r.popust) html += `<div class="flex justify-between text-emerald-700"><span>${T.popust(r.proc)}</span><span>-${r.popust} €</span></div>`;
+                html += `<div class="flex justify-between font-bold text-base mt-2 pt-2 border-t border-kucerak-moss/30"><span>${T.ukupno}</span><span>${r.ukupno} €</span></div>`;
+                if (r.g.gratis || r.g.bebe) html += `<p class="text-xs text-emerald-700 mt-2">${T.gratis}</p>`;
                 html += `<p class="text-xs text-kucerak-olive/60 mt-2">${T.napomena}</p>`;
             }
             box.innerHTML = html;
@@ -1118,9 +1296,10 @@
 
         document.addEventListener('DOMContentLoaded', function() {
             ['dolazak', 'odlazak'].forEach(id => document.getElementById(id).addEventListener('change', racunajCenu));
-            ['odrasli', 'deca'].forEach(id => document.getElementById(id).addEventListener('input', racunajCenu));
+            document.getElementById('odrasli').addEventListener('input', racunajCenu);
+            document.getElementById('deca').addEventListener('input', osveziUzrasteDece);
             document.getElementById('smeštajSelektor').addEventListener('change', racunajCenu);
-            racunajCenu();
+            osveziUzrasteDece();
         });
     </script>
 </body>
