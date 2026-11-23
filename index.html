@@ -962,12 +962,12 @@
         }
 
 const MSG = (document.documentElement.lang === 'en') ? {
-            wait: s => `Your booking inquiry has already been received. Please wait another ${s} seconds before sending another request.`,
+                    wait: s => `Your inquiry has just been sent. Please wait another ${s} seconds before sending a new one. To add details, call us or message us on WhatsApp.`,
             dates: "Please select both an arrival and a departure date.",
             min: "The minimum stay is 2 nights. The departure date must be at least 2 days after arrival.",
             cap: "A single apartment sleeps up to 4 guests (a fifth guest can only be a baby in a cot). Please choose two apartments or the entire complex."
         } : {
-            wait: s => `Vaš upit je već uspešno primljen. Molimo vas sačekajte još ${s} sekundi pre slanja sledeće poruke.`,
+            wait: s => `Upit je upravo poslat. Molimo vas sačekajte još ${s} sekundi pre slanja novog. Ako želite da dopunite upit, pozovite nas ili pošaljite poruku na WhatsApp.`,
             dates: "Molimo izaberite datum dolaska i datum odlaska.",
             min: "Minimalan boravak je 2 noćenja. Datum odlaska mora biti najmanje 2 dana posle dolaska.",
             cap: "U jednom apartmanu može da boravi do 4 osobe (peti gost može biti samo beba u krevecu). Izaberite dva apartmana ili ceo kompleks."
@@ -1037,7 +1037,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
 
             // 2. Jedan upit na 5 minuta
             const sada = Date.now();
-            const pauza = 5 * 60 * 1000;
+            const pauza = 60 * 1000;
             let poslednje = 0;
             try { poslednje = parseInt(localStorage.getItem('vremePoslednjegUpita'), 10) || 0; } catch (e) {}
             if (poslednje && (sada - poslednje < pauza)) {
