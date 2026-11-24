@@ -13,7 +13,7 @@
 
     <meta property="og:title" content="Kućerak 111 | Apartments with Pool Vrdnik">
     <meta property="og:description" content="A perfect vacation in Vrdnik. Private pool, modernly equipped apartments, and peaceful surroundings.">
-    <meta property="og:image" content="https://vasilije777.github.io/kucerak111-website/slike/IMG_5951.jpg">
+    <meta property="og:image" content="https://tvojdomen.com/slike/IMG_5951.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -42,16 +42,18 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- Engleska lokalizacija za kalendar je automatski ugrađena u flatpickr -->
 
-    <link rel="canonical" href="https://vasilije777.github.io/kucerak111-website/en.html">
-    <link rel="alternate" hreflang="sr" href="https://vasilije777.github.io/kucerak111-website/">
-    <link rel="alternate" hreflang="en" href="https://vasilije777.github.io/kucerak111-website/en.html">
-    <link rel="alternate" hreflang="x-default" href="https://vasilije777.github.io/kucerak111-website/">
+    <!-- TODO: zameni tvojdomen.com pravim domenom (pretraga i zamena u sva 4 fajla) -->
+    <link rel="canonical" href="https://tvojdomen.com/en.html">
+    <link rel="alternate" hreflang="sr" href="https://tvojdomen.com/">
+    <link rel="alternate" hreflang="en" href="https://tvojdomen.com/en.html">
+    <link rel="alternate" hreflang="x-default" href="https://tvojdomen.com/">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vasilije777.github.io/kucerak111-website/en.html">
+    <meta property="og:url" content="https://tvojdomen.com/en.html">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Kućerak 111", "description": "Kućerak 111 apartments in Vrdnik: private pool, yard and the peace of Fruška Gora.", "url": "https://vasilije777.github.io/kucerak111-website/en.html", "telephone": "+381652716277", "image": "https://vasilije777.github.io/kucerak111-website/slike/IMG_5951.jpg", "priceRange": "65-85 EUR", "address": {"@type": "PostalAddress", "streetAddress": "Vojvođanske brigade 93", "addressLocality": "Vrdnik", "addressCountry": "RS"}, "checkinTime": "14:00", "checkoutTime": "10:00", "petsAllowed": true, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Swimming pool", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true}], "sameAs": ["https://www.instagram.com/kucerak111/", "https://www.facebook.com/kucerak111/", "https://www.tiktok.com/@kucerak111"]}</script>
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "LodgingBusiness", "name": "Kućerak 111", "description": "Kućerak 111 apartments in Vrdnik: private pool, yard and the peace of Fruška Gora.", "url": "https://tvojdomen.com/en.html", "telephone": "+381652716277", "image": "https://tvojdomen.com/slike/IMG_5951.jpg", "priceRange": "65-85 EUR", "address": {"@type": "PostalAddress", "streetAddress": "Vojvođanske brigade 93", "addressLocality": "Vrdnik", "addressCountry": "RS"}, "checkinTime": "14:00", "checkoutTime": "10:00", "petsAllowed": true, "amenityFeature": [{"@type": "LocationFeatureSpecification", "name": "Swimming pool", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Free Wi-Fi", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Air conditioning", "value": true}, {"@type": "LocationFeatureSpecification", "name": "Parking", "value": true}], "sameAs": ["https://www.instagram.com/kucerak111/", "https://www.facebook.com/kucerak111/", "https://www.tiktok.com/@kucerak111"]}</script>
     <style>html { scroll-padding-top: 5rem; } .no-spin::-webkit-inner-spin-button, .no-spin::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; } .no-spin { -moz-appearance: textfield; }</style>
 </head>
 <body class="bg-kucerak-beige text-kucerak-dark font-sans antialiased">
@@ -976,15 +978,15 @@
 
 const MSG = (document.documentElement.lang === 'en') ? {
             saljem: 'Sending...',
-            zauzeto: "Some of the selected nights are fully booked. Please choose different dates or contact us directly.",
-                    wait: s => `Your inquiry has just been sent. Please wait another ${s} seconds before sending a new one. To add details, call us or message us on WhatsApp.`,
+            zauzeto: "The selected accommodation is not available for these dates. Please choose different dates or another apartment, or contact us directly.",
+            wait: s => `Your booking inquiry has already been received. Please wait another ${s} seconds before sending another request.`,
             dates: "Please select both an arrival and a departure date.",
             min: "The minimum stay is 2 nights. The departure date must be at least 2 days after arrival.",
             cap: "A single apartment sleeps up to 4 guests (a fifth guest can only be a baby in a cot). Please choose two apartments or the entire complex."
         } : {
             saljem: 'Šaljem...',
-            zauzeto: "Neke od izabranih noći su zauzete. Izaberite drugi termin ili nas kontaktirajte direktno.",
-            wait: s => `Upit je upravo poslat. Molimo vas sačekajte još ${s} sekundi pre slanja novog. Ako želite da dopunite upit, pozovite nas ili pošaljite poruku na WhatsApp.`,
+            zauzeto: "Izabrani smeštaj nije slobodan u ovom terminu. Izaberite drugi termin ili apartman, ili nas kontaktirajte direktno.",
+            wait: s => `Vaš upit je već uspešno primljen. Molimo vas sačekajte još ${s} sekundi pre slanja sledeće poruke.`,
             dates: "Molimo izaberite datum dolaska i datum odlaska.",
             min: "Minimalan boravak je 2 noćenja. Datum odlaska mora biti najmanje 2 dana posle dolaska.",
             cap: "U jednom apartmanu može da boravi do 4 osobe (peti gost može biti samo beba u krevecu). Izaberite dva apartmana ili ceo kompleks."
@@ -999,37 +1001,98 @@ const MSG = (document.documentElement.lang === 'en') ? {
             return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate());
         }
 
-        // Zauzete noći: lista datuma "YYYY-MM-DD" ili opsega {from, to} iz fajla zauzeto.json
-        // (upisuju se samo noći kada NIJE slobodan nijedan apartman; "to" je poslednja zauzeta noć)
-        let zauzetoNoci = [];
+        // =========================================================================
+        // --- ZAUZETOST APARTMANA (čita se iz fajla zauzeto.json) ---
+        // =========================================================================
+        // Svaka rezervacija u zauzeto.json:
+        //   {"apartman": "plavi" | "zeleni" | "zuti" | "ceo" | ["plavi","zuti"], "od": "dan dolaska", "do": "dan odlaska"}
+        // Noći od "od" do "do" su zauzete, a dan odlaska ("do") je slobodan za novi dolazak.
+        const SVI_APARTMANI = ['plavi', 'zeleni', 'zuti'];
+        let rezervacije = [];
+        let dolazakPicker = null;
+        let odlazakPicker = null;
+        let poslednjiMax;
 
-        function ucitajZauzeto(lista) {
-            const skup = new Set();
-            (Array.isArray(lista) ? lista : []).forEach(x => {
-                if (typeof x === 'string') skup.add(x);
-                else if (x && x.from && x.to) {
-                    const d = new Date(x.from + 'T00:00:00');
-                    const kraj = new Date(x.to + 'T00:00:00');
-                    for (let i = 0; d <= kraj && i < 800; i++) { skup.add(lokalniDatum(d)); d.setDate(d.getDate() + 1); }
-                }
+        function ucitajRezervacije(lista) {
+            rezervacije = [];
+            (Array.isArray(lista) ? lista : []).forEach(r => {
+                if (!r || !r.od || !r.do) return;
+                const izvor = r.apartman !== undefined ? r.apartman : (r.apartmani !== undefined ? r.apartmani : 'ceo');
+                const apts = [];
+                (Array.isArray(izvor) ? izvor : [izvor]).forEach(x => {
+                    const k = String(x).toLowerCase().replace('ž', 'z').trim();
+                    if (k === 'ceo' || k === 'ceo-kompleks' || k === 'svi' || k === 'kompleks') SVI_APARTMANI.forEach(a => apts.push(a));
+                    else if (SVI_APARTMANI.includes(k)) apts.push(k);
+                });
+                if (apts.length) rezervacije.push({ apts: Array.from(new Set(apts)), od: r.od, do: r.do });
             });
-            zauzetoNoci = Array.from(skup).sort();
         }
 
-        // Da li je neka noć između dolaska i odlaska zauzeta (noć odlaska se ne računa)
-        function imaZauzetuNoc(dol, odl) {
-            return zauzetoNoci.some(d => d >= dol && d < odl);
+        // Koji su apartmani slobodni za ceo boravak [dolazak, odlazak)
+        function slobodniApartmani(dol, odl) {
+            return SVI_APARTMANI.filter(a => !rezervacije.some(r => r.apts.includes(a) && r.od < odl && r.do > dol));
         }
 
-        // Prva zauzeta noć posle datuma dolaska (najkasniji mogući odlazak)
-        function prvaZauzetaPosle(dol) {
-            return zauzetoNoci.find(d => d > dol) || null;
+        // Da li izabrana opcija može da se rezerviše kada su slobodni dati apartmani
+        function jeDostupno(izbor, slobodni) {
+            if (SVI_APARTMANI.includes(izbor)) return slobodni.includes(izbor);
+            if (izbor === 'bilo-koji') return slobodni.length >= 1;
+            if (izbor === 'dva-apartmana') return slobodni.length >= 2;
+            if (izbor === 'ceo-kompleks') return slobodni.length === 3;
+            return true;
+        }
+
+        function dostupnoZaIzbor(dol, odl, izbor) {
+            return jeDostupno(izbor, slobodniApartmani(dol, odl));
+        }
+
+        function sutraISO(iso) {
+            const d = new Date(iso + 'T00:00:00');
+            d.setDate(d.getDate() + 1);
+            return lokalniDatum(d);
+        }
+
+        // Kalendar za dolazak: zaključava dane kada izabrani smeštaj nije slobodan
+        function nedostupanZaDolazak(date) {
+            const sel = document.getElementById('smeštajSelektor');
+            const d = lokalniDatum(date);
+            return !jeDostupno(sel ? sel.value : 'bilo-koji', slobodniApartmani(d, sutraISO(d)));
+        }
+
+        // Prva noć posle dolaska u kojoj izabrani smeštaj više nije slobodan
+        function prvaNedostupnaPosle(dol, izbor) {
+            let d = dol;
+            for (let i = 0; i < 400; i++) {
+                if (!jeDostupno(izbor, slobodniApartmani(d, sutraISO(d))) && d > dol) return d;
+                d = sutraISO(d);
+            }
+            return null;
+        }
+
+        // Osveži kalendar posle promene smeštaja ili učitavanja zauzetosti
+        function osveziKalendar() {
+            if (!dolazakPicker || !odlazakPicker) return;
+            dolazakPicker.redraw();
+            const dolISO = document.getElementById('dolazak').value;
+            if (!dolISO) return;
+            const sel = document.getElementById('smeštajSelektor');
+            const prva = prvaNedostupnaPosle(dolISO, sel ? sel.value : 'bilo-koji');
+            const d = new Date(dolISO + 'T00:00:00');
+            d.setDate(d.getDate() + 2);
+            const max = (prva && prva >= lokalniDatum(d)) ? prva : null;
+            if (max !== poslednjiMax) { poslednjiMax = max; odlazakPicker.set('maxDate', max); }
         }
 
         document.addEventListener('DOMContentLoaded', function() {
             const dol = document.getElementById('dolazak');
             const odl = document.getElementById('odlazak');
             if (!dol || !odl) return;
+
+            // Zauzetost iz zauzeto.json (ako fajl ne postoji, sve je slobodno)
+            const ucitajZauzetost = () => fetch('zauzeto.json', { cache: 'no-store' })
+                .then(r => r.ok ? r.json() : [])
+                .then(lista => { ucitajRezervacije(lista); osveziKalendar(); racunajCenu(); })
+                .catch(() => {});
 
             if (typeof flatpickr === 'undefined') {
                 // Rezerva ako se biblioteka ne učita: obični date input
@@ -1043,6 +1106,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
                     odl.min = min;
                     if (odl.value && odl.value < min) odl.value = '';
                 });
+                ucitajZauzetost();
                 return;
             }
 
@@ -1052,30 +1116,21 @@ const MSG = (document.documentElement.lang === 'en') ? {
                 locale: jezik, dateFormat: 'Y-m-d', altInput: true, altFormat: en ? 'j M Y' : 'd.m.Y.',
                 disableMobile: true, monthSelectorType: 'static'
             };
-            const odlazakPicker = flatpickr(odl, Object.assign({}, zajednicko, { minDate: new Date().fp_incr(2) }));
-            const dolazakPicker = flatpickr(dol, Object.assign({}, zajednicko, {
+            odlazakPicker = flatpickr(odl, Object.assign({}, zajednicko, { minDate: new Date().fp_incr(2) }));
+            dolazakPicker = flatpickr(dol, Object.assign({}, zajednicko, {
                 minDate: 'today',
+                disable: [nedostupanZaDolazak],
                 onChange: function(izabrano) {
                     if (!izabrano[0]) return;
                     const minOdl = izabrano[0].fp_incr(2);
                     odlazakPicker.set('minDate', minOdl);
-                    // Odlazak ne može biti posle prve zauzete noći
-                    const prva = prvaZauzetaPosle(lokalniDatum(izabrano[0]));
-                    odlazakPicker.set('maxDate', (prva && prva >= lokalniDatum(minOdl)) ? prva : null);
+                    osveziKalendar();
                     const trenutni = odlazakPicker.selectedDates[0];
-                    if (trenutni && (trenutni < minOdl || (prva && lokalniDatum(trenutni) > prva))) odlazakPicker.clear();
+                    if (trenutni && trenutni < minOdl) odlazakPicker.clear();
                     odlazakPicker.open();
                 }
             }));
-
-            // Zauzeti termini iz zauzeto.json (ako fajl ne postoji, sve je slobodno)
-            fetch('zauzeto.json', { cache: 'no-store' })
-                .then(r => r.ok ? r.json() : [])
-                .then(lista => {
-                    ucitajZauzeto(lista);
-                    if (zauzetoNoci.length) dolazakPicker.set('disable', zauzetoNoci);
-                })
-                .catch(() => {});
+            ucitajZauzetost();
         });
 
         // Briše slova iz polja za telefon dok korisnik kuca
@@ -1088,9 +1143,9 @@ const MSG = (document.documentElement.lang === 'en') ? {
             const zamka = document.getElementById('praznoPolje');
             if (zamka && zamka.value !== '') { event.preventDefault(); return false; }
 
-            // 2. Jedan upit na 1 minuta
+            // 2. Jedan upit na 5 minuta
             const sada = Date.now();
-            const pauza = 60 * 1000;
+            const pauza = 5 * 60 * 1000;
             let poslednje = 0;
             try { poslednje = parseInt(localStorage.getItem('vremePoslednjegUpita'), 10) || 0; } catch (e) {}
             if (poslednje && (sada - poslednje < pauza)) {
@@ -1111,7 +1166,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
             if (izbor !== 'ceo-kompleks' && !staje(gosti(), APARTMANI_PO_IZBORU[izbor] || 1)) { alert(MSG.cap); event.preventDefault(); return false; }
 
             // 4b. Zauzeti termini
-            if (imaZauzetuNoc(dol.value, odl.value)) { alert(MSG.zauzeto); event.preventDefault(); return false; }
+            if (!dostupnoZaIzbor(dol.value, odl.value, izbor)) { alert(MSG.zauzeto); event.preventDefault(); return false; }
 
             // 5. Cena ide u mejl
             const poljeCena = document.getElementById('procenjenaCena');
@@ -1136,7 +1191,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
             i.className = otvoren ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
         }
 
-        // Esc zatvara i model apartmana
+        // Esc zatvara i modal apartmana
         document.addEventListener('keydown', function(e) {
             if (e.key !== 'Escape') return;
             const m = document.getElementById('apartmentModal');
@@ -1158,16 +1213,16 @@ const MSG = (document.documentElement.lang === 'en') ? {
         })();
 
         // =========================================================================
-        // --- PROCENA CENE (uzrast dece, više apartmana, popust po broju osoba) ---
+        // --- PROCENA CENE (uzrast dece, više apartmana, zauzetost, popust po broju osoba) ---
         // =========================================================================
         const CENE_PO_NOCI = { 1: 65, 2: 65, 3: 75, 4: 85 };   // € po apartmanu po noći (odrasli + deca 14+)
         const POPUST_OD_NOCI = 7;                               // popust važi od ovoliko noćenja
         const POPUST_1_2_OSOBE = 0.10;                          // 10% za 1–2 osobe
         const POPUST_3_4_OSOBE = 0.15;                          // 15% za 3–4 osobe
-        const BEBA_DO = 2;                                      // deca 0–2: beba u krevecu
+        const BEBA_DO = 2;                                      // deca 0–2: beba u krevecu (ne zauzima ležaj)
         const DECA_GRATIS_DO = 7;                               // deca do 7 god.: besplatno
         const DECA_POPUST_DO = 13;                              // deca 8–13: doplata; 14–17: kao odrasli
-        const DOPLATA_DETE_POPUST = 5;                          // € po detetu po noći za uzrast 8–13
+        const DOPLATA_DETE_POPUST = 5;                          // € po detetu po noći za uzrast 8–13 (PROMENI!)
         const OSOBA_PO_APARTMANU = 4;                           // kapacitet jednog apartmana
         const APARTMANI_PO_IZBORU = { 'bilo-koji': 1, 'plavi': 1, 'zeleni': 1, 'zuti': 1, 'dva-apartmana': 2, 'ceo-kompleks': 3 };
 
@@ -1228,27 +1283,27 @@ const MSG = (document.documentElement.lang === 'en') ? {
             });
             return {
                 odrasli, bebe, gratis, popust, redovna, nepoznato,
-                placaju: odrasli + redovna,
-                osoba: odrasli + redovna + popust,
-                bezBebe: odrasli + redovna + popust + gratis + nepoznato
+                placaju: odrasli + redovna,                                   // za tarifu 65/75/85 €
+                osoba: odrasli + redovna + popust,                            // za izbor popusta 10% / 15%
+                bezBebe: odrasli + redovna + popust + gratis + nepoznato      // svi koji zauzimaju ležaj
             };
         }
 
-        // Da li gosti staju u n apartmana (4 po apartmanu; po jedna beba u krevecu po apartmanu)
+        // Da li gosti staju u n apartmana (4 po apartmanu; po jedna beba u krevecu po apartmanu ne računa se)
         function staje(g, n) {
             return g.bezBebe + Math.max(0, g.bebe - n) <= OSOBA_PO_APARTMANU * n;
         }
 
-        // Koliko je apartmana najmanje potrebno
+        // Koliko je apartmana najmanje potrebno (4 = više nego što ceo kompleks ima ležajeva)
         function potrebnoApartmana(g) {
             for (let n = 1; n <= 3; n++) if (staje(g, n)) return n;
             return 4;
         }
 
-        // Pamti šta je gost sam izabrao, da se posle automatskog prebacivanja vrati na to kad opet stane
+        // Pamti šta je gost sam izabrao, da se posle automatskog prebacivanja vrati na to kad opet može
         let zapamcenIzbor = null;
 
-        // Onemogući izbore koji su premali i prebaci na odgovarajući
+        // Uskladi izbor smeštaja sa brojem gostiju (kapacitet) i zauzetošću u izabranom terminu
         function uskladiSmestaj() {
             const sel = document.getElementById('smeštajSelektor');
             const nap = document.getElementById('smestajNapomena');
@@ -1258,23 +1313,42 @@ const MSG = (document.documentElement.lang === 'en') ? {
             const cilj = Math.min(potrebno, 3);
             if (zapamcenIzbor === null) zapamcenIzbor = sel.value;
 
-            Array.from(sel.options).forEach(o => { o.disabled = (APARTMANI_PO_IZBORU[o.value] || 1) < cilj; });
-            if ((APARTMANI_PO_IZBORU[zapamcenIzbor] || 1) >= cilj) sel.value = zapamcenIzbor;
-            else sel.value = cilj === 2 ? 'dva-apartmana' : 'ceo-kompleks';
+            const dol = document.getElementById('dolazak').value;
+            const odl = document.getElementById('odlazak').value;
+            const imaDatume = !!(dol && odl && odl > dol);
+            const slobodni = imaDatume ? slobodniApartmani(dol, odl) : SVI_APARTMANI.slice();
+            const dozvoljeno = v => (APARTMANI_PO_IZBORU[v] || 1) >= cilj && jeDostupno(v, slobodni);
 
-            if (nap) {
-                if (potrebno === 2) nap.textContent = en ? 'For this number of guests at least 2 apartments are needed (one apartment sleeps 4; a fifth guest can only be a baby in a cot).' : 'Za ovaj broj gostiju potrebna su najmanje 2 apartmana (jedan apartman je za 4 osobe, a peti gost može biti samo beba u krevecu).';
-                else if (potrebno === 3) nap.textContent = en ? 'For this number of guests the entire complex (all 3 apartments) is needed.' : 'Za ovaj broj gostiju potreban je ceo kompleks (sva 3 apartmana).';
-                else if (potrebno === 4) nap.textContent = en ? 'This exceeds the sleeping capacity of the complex (12 guests). Please tell us in the notes how many of you there are and we will get back to you.' : 'Ovo premašuje kapacitet za spavanje u kompleksu (12 osoba). Napišite nam u napomeni koliko vas je ukupno i javićemo vam mogućnosti.';
-                else nap.textContent = '';
-                nap.classList.toggle('hidden', potrebno === 1);
+            Array.from(sel.options).forEach(o => { o.disabled = !dozvoljeno(o.value); });
+            let izbor = dozvoljeno(zapamcenIzbor) ? zapamcenIzbor : null;
+            if (izbor === null) {
+                const redosled = cilj === 1 ? ['bilo-koji', 'plavi', 'zeleni', 'zuti'] : (cilj === 2 ? ['dva-apartmana', 'ceo-kompleks'] : ['ceo-kompleks']);
+                izbor = redosled.find(dozvoljeno) || null;
             }
+            if (izbor !== null) sel.value = izbor;
+
+            const imena = en ? { plavi: 'Blue', zeleni: 'Green', zuti: 'Yellow' } : { plavi: 'Plavi', zeleni: 'Zeleni', zuti: 'Žuti' };
+            const poruke = [];
+            if (potrebno === 2) poruke.push(en ? 'For this number of guests at least 2 apartments are needed (one apartment sleeps 4; a fifth guest can only be a baby in a cot).' : 'Za ovaj broj gostiju potrebna su najmanje 2 apartmana (jedan apartman je za 4 osobe, a peti gost može biti samo beba u krevecu).');
+            else if (potrebno === 3) poruke.push(en ? 'For this number of guests the entire complex (all 3 apartments) is needed.' : 'Za ovaj broj gostiju potreban je ceo kompleks (sva 3 apartmana).');
+            else if (potrebno === 4) poruke.push(en ? 'This exceeds the sleeping capacity of the complex (12 guests). Please tell us in the notes how many of you there are and we will get back to you.' : 'Ovo premašuje kapacitet za spavanje u kompleksu (12 osoba). Napišite nam u napomeni koliko vas je ukupno i javićemo vam mogućnosti.');
+            if (imaDatume && slobodni.length < 3) {
+                poruke.push(slobodni.length
+                    ? (en ? 'Available for these dates: ' : 'Slobodno u ovom terminu: ') + slobodni.map(a => imena[a]).join(', ') + '.'
+                    : (en ? 'No apartment is available for these dates.' : 'Za ovaj termin nema slobodnih apartmana.'));
+            }
+            if (nap) {
+                nap.textContent = poruke.join(' ');
+                nap.classList.toggle('hidden', poruke.length === 0);
+            }
+            osveziKalendar();
         }
 
         function tarifa(osoba) {
             return CENE_PO_NOCI[Math.min(4, Math.max(1, osoba))];
         }
 
+        // Jedan izvor istine za cenu (koriste je i prikaz i mejl)
         function izracunajCenu() {
             const dol = document.getElementById('dolazak').value;
             const odl = document.getElementById('odlazak').value;
@@ -1283,9 +1357,11 @@ const MSG = (document.documentElement.lang === 'en') ? {
             if (noci < 1) return { tip: 'start' };
             if (noci < 2) return { tip: 'min', noci };
 
+            const izbor = document.getElementById('smeštajSelektor').value;
+            if (!dostupnoZaIzbor(dol, odl, izbor)) return { tip: 'zauzeto', noci };
+
             const g = gosti();
             if (g.nepoznato > 0) return { tip: 'uzrast', noci };
-            const izbor = document.getElementById('smeštajSelektor').value;
             if (izbor === 'ceo-kompleks') return { tip: 'kompleks', noci };
             const apt = APARTMANI_PO_IZBORU[izbor] || 1;
             if (!staje(g, apt)) return { tip: 'vise', noci };
@@ -1300,11 +1376,12 @@ const MSG = (document.documentElement.lang === 'en') ? {
             return { tip: 'cena', noci, apt, g, poNoci, osnovno, doplata, popust, proc: Math.round(stopa * 100), ukupno: pre - popust };
         }
 
-        // Kratak tekst o ceni za mejl
+        // Kratak tekst o ceni za mejl (uvek na srpskom)
         function cenaZaMejl() {
             const r = izracunajCenu();
             if (r.tip === 'start' || r.tip === 'uzrast') return '';
             if (r.tip === 'min') return `ispod minimuma (${r.noci} noćenje)`;
+            if (r.tip === 'zauzeto') return 'termin nije slobodan';
             if (r.tip === 'kompleks') return `po dogovoru (ceo kompleks, ${r.noci} noćenja)`;
             if (r.tip === 'vise') return `po dogovoru (više apartmana, ${r.noci} noćenja)`;
             return `${r.ukupno} € (` + (r.apt === 2 ? '2 apartmana, ' : '') + `${r.noci} noćenja` + (r.popust ? `, popust ${r.proc}%` : '') + ')';
@@ -1320,6 +1397,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
                 start: 'Select arrival and departure dates to see an estimated price.',
                 uzrast: "Select the children's age groups to see an estimated price.",
                 min: 'The minimum stay is 2 nights.',
+                zauzeto: 'The selected accommodation is not available for these dates. Please choose different dates or contact us directly.',
                 kompleks: 'The price for the entire complex is arranged individually. We will send you an offer in our reply.',
                 vise: 'The selected accommodation cannot host this many guests. Please choose more apartments.',
                 dvaApt: '2 apartments',
@@ -1333,6 +1411,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
                 start: 'Izaberite datume dolaska i odlaska da vidite okvirnu cenu.',
                 uzrast: 'Izaberite uzrast dece da vidite okvirnu cenu.',
                 min: 'Minimalan boravak je 2 noćenja.',
+                zauzeto: 'Izabrani smeštaj nije slobodan u ovom terminu. Izaberite drugi termin ili nas kontaktirajte direktno.',
                 kompleks: 'Cena za ceo kompleks se dogovara individualno. Javićemo Vam se sa ponudom u odgovoru.',
                 vise: 'Izabrani smeštaj ne može da primi ovoliko gostiju. Izaberite više apartmana.',
                 dvaApt: '2 apartmana',
@@ -1349,6 +1428,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
             if (r.tip === 'start') html = T.start;
             else if (r.tip === 'uzrast') html = `<p>${T.uzrast}</p>`;
             else if (r.tip === 'min') html = `<p class="font-medium">${T.min}</p>`;
+            else if (r.tip === 'zauzeto') html = `<p class="font-medium">${T.zauzeto}</p>`;
             else if (r.tip === 'kompleks') html = `<p>${T.kompleks}</p>`;
             else if (r.tip === 'vise') html = `<p>${T.vise}</p>`;
             else {
