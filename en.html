@@ -42,9 +42,8 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- Engleska lokalizacija za kalendar je automatski ugrađena u flatpickr -->
+    <!-- Engleska lokalizacija za kalendar (flatpickr) -->
 
-    <!-- TODO: zameni tvojdomen.com pravim domenom (pretraga i zamena u sva 4 fajla) -->
     <link rel="canonical" href="https://tvojdomen.com/en.html">
     <link rel="alternate" hreflang="sr" href="https://tvojdomen.com/">
     <link rel="alternate" hreflang="en" href="https://tvojdomen.com/en.html">
@@ -70,7 +69,7 @@
                     </a>
                 </div>
 
-                <!-- SREDINA: LINKOVI (Sa bezbednim razmakom od telefona) -->
+                <!-- SREDINA: LINKOVI -->
                 <div class="hidden lg:flex flex-1 justify-center space-x-5 xl:space-x-7 font-medium text-xs tracking-widest uppercase">
                     <a href="#pocetna" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Home</a>
                     <a href="#apartmani" class="text-kucerak-olive hover:text-kucerak-moss transition whitespace-nowrap">Apartments</a>
@@ -81,7 +80,7 @@
                     <a href="#faq" class="text-kucerak-olive hover:text-kucerak-moss font-medium transition whitespace-nowrap mr-8 xl:mr-12">FAQ</a>
                 </div>
 
-                <!-- DESNA STRANA: AKCIJE (Sa elegantnom vertikalnom linijom ispred telefona) -->
+                <!-- DESNA STRANA: AKCIJE -->
                 <div class="flex items-center space-x-3 xl:space-x-4 flex-shrink-0 justify-end ml-auto">
                     <a href="tel:+381652716277" class="hidden xl:inline-block text-kucerak-olive font-medium text-xs tracking-wider uppercase hover:text-kucerak-moss transition whitespace-nowrap border-l border-kucerak-sand/60 pl-6 h-5 flex items-center">
                         <i class="fa-solid fa-phone mr-2"></i> +381 65 2716277
@@ -128,10 +127,9 @@
     </div>
     </nav>
 
-    <!-- HERO SECTION WITH NEW FOREST BACKGROUND -->
+    <!-- HERO SECTION WITH FOREST BACKGROUND -->
     <section id="pocetna" class="relative pt-20 min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat overflow-hidden" style="background-image: url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1920&auto=format&fit=crop');">
         
-        <!-- Premium light overlay to keep text completely readable -->
         <div class="absolute inset-0 bg-kucerak-beige/85 backdrop-blur-[1px] z-0"></div>
         
         <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
@@ -153,7 +151,7 @@
         </div>
     </section>
 
-    <!-- BRZI INFO SVEJTLOSTI (QUICK INFO HIGHLIGHTS) -->
+    <!-- BRZI INFO -->
     <section class="py-12 bg-kucerak-olive text-kucerak-beige">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-5 gap-8 text-center">
@@ -628,7 +626,7 @@
                     </div>
                 </div>
 
-                <!-- Uzrast dece (pravi JavaScript) -->
+                <!-- Uzrast dece -->
                 <div id="uzrastDece" class="grid grid-cols-2 sm:grid-cols-3 gap-4"></div>
 
                 <label class="flex items-center gap-3 text-sm text-kucerak-olive cursor-pointer">
@@ -662,7 +660,7 @@
                     <textarea id="f-napomena" name="Napomena" rows="3" class="w-full px-4 py-3 border border-kucerak-sand rounded focus:outline-none focus:border-kucerak-olive bg-kucerak-beige/50 text-sm" placeholder="e.g. Traveling with pets, baby cot needed, event organization details..."></textarea>
                 </div>
 
-                <!-- Procena cene (popunjava JavaScript) -->
+                <!-- Procena cene -->
                 <div id="procenaCene" class="bg-kucerak-sand/50 border border-dashed border-kucerak-moss/40 rounded-lg p-4 text-sm text-kucerak-olive" aria-live="polite">Select arrival and departure dates to see an estimated price.</div>
                 <input type="hidden" id="procenjenaCena" name="Procenjena cena" value="">
 
