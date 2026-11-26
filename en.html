@@ -287,28 +287,16 @@
                 </div>
 
                 <!-- KARUSEL -->
-                <div class="relative rounded-xl overflow-hidden border border-kucerak-sand/40 shadow-lg h-[450px] bg-kucerak-dark group cursor-pointer" onclick="openYardLightbox()">
-                    <div id="yardSlider" class="flex w-full h-full transition-transform duration-700 ease-in-out">
-                        <div class="min-w-full h-full flex-shrink-0">
-                            <img loading="lazy" decoding="async" src="slike/IMG_5951.jpg" alt="Yard" class="w-full h-full object-cover">
-                        </div>
-                        <div class="min-w-full h-full flex-shrink-0">
-                            <img loading="lazy" decoding="async" src="slike/289450498_Kucerak111IMG20210525171705jpg" alt="Pool" class="w-full h-full object-cover">
-                        </div>
-                        <div class="min-w-full h-full flex-shrink-0">
-                            <img loading="lazy" decoding="async" src="slike/541740150_Kucerak111IMG19965a791baeb20273364d9553269f47Vjpg" alt="Summer House" class="w-full h-full object-cover">
-                        </div>
-                    </div>
-                    
+                <div id="yardKarusel" class="relative rounded-xl overflow-hidden border border-kucerak-sand/40 shadow-lg h-[450px] bg-kucerak-dark group cursor-pointer" onclick="openYardLightbox()">
+                    <div id="yardSlider" class="flex w-full h-full transition-transform duration-700 ease-in-out"></div>
+
                     <div class="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-3 py-1.5 rounded-full backdrop-blur-sm z-10 flex items-center gap-1">
                         <i class="fa-solid fa-expand"></i> Click for full gallery
                     </div>
 
-                    <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 z-10">
-                        <span class="w-2.5 h-2.5 bg-white rounded-full transition-all duration-300" id="dot0"></span>
-                        <span class="w-2.5 h-2.5 bg-white/50 rounded-full transition-all duration-300" id="dot1"></span>
-                        <span class="w-2.5 h-2.5 bg-white/50 rounded-full transition-all duration-300" id="dot2"></span>
-                    </div>
+                    <button type="button" onclick="event.stopPropagation(); pomeriKarusel(-1)" aria-label="Previous image" class="left-3 absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-black/40 hover:bg-black/65 text-white rounded-full flex items-center justify-center transition opacity-80 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button type="button" onclick="event.stopPropagation(); pomeriKarusel(1)" aria-label="Next image" class="right-3 absolute top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-black/40 hover:bg-black/65 text-white rounded-full flex items-center justify-center transition opacity-80 sm:opacity-0 sm:group-hover:opacity-100 focus:opacity-100"><i class="fa-solid fa-chevron-right"></i></button>
+                    <div id="yardDots" class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex z-10"></div>
                 </div>
             </div>
         </div>
@@ -729,12 +717,14 @@
         <div class="bg-white max-w-2xl w-full rounded-xl overflow-hidden shadow-2xl transform scale-95 transition-all duration-300 max-h-[90vh] overflow-y-auto">
             
             <!-- INTEGRATED MODAL GALLERY -->
-            <div class="relative h-64 sm:h-80 bg-gray-900">
+            <div id="modalGalerija" class="relative h-64 sm:h-80 bg-gray-900">
                 <button onclick="closeModal()" aria-label="Close" class="absolute top-4 right-4 z-30 w-10 h-10 bg-black/50 hover:bg-black/80 text-white rounded-full flex items-center justify-center transition">
                     <i class="fa-solid fa-xmark text-lg"></i>
                 </button>
                 
                 <!-- Main large modal image -->
+                <button type="button" onclick="pomeriModal(-1)" aria-label="Previous image" class="left-3 absolute top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-black/45 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition"><i class="fa-solid fa-chevron-left"></i></button>
+                <button type="button" onclick="pomeriModal(1)" aria-label="Next image" class="right-3 absolute top-1/2 -translate-y-1/2 z-20 w-10 h-10 bg-black/45 hover:bg-black/70 text-white rounded-full flex items-center justify-center transition"><i class="fa-solid fa-chevron-right"></i></button>
                 <img id="modalImg" src="" alt="Accommodation" class="w-full h-full object-cover">
                 
                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6">
@@ -743,10 +733,11 @@
             </div>
 
             <!-- THUMBNAILS BELOW LARGE IMAGE -->
-            <div class="bg-kucerak-dark px-6 py-3 flex gap-3 justify-center border-b border-kucerak-sand/20">
-                <img id="thumb0" src="" onclick="switchModalThumb(0)" class="w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
-                <img id="thumb1" src="" onclick="switchModalThumb(1)" class="w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
-                <img id="thumb2" src="" onclick="switchModalThumb(2)" class="w-20 h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
+            <div class="bg-kucerak-dark px-6 py-3 flex flex-wrap gap-3 justify-center border-b border-kucerak-sand/20">
+                <img id="thumb0" src="" onclick="switchModalThumb(0)" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
+                <img id="thumb1" src="" onclick="switchModalThumb(1)" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
+                <img id="thumb2" src="" onclick="switchModalThumb(2)" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
+                <img id="thumb3" src="" onclick="switchModalThumb(3)" class="w-16 h-12 sm:w-20 sm:h-14 object-cover rounded cursor-pointer border-2 border-transparent hover:border-white transition opacity-70 hover:opacity-100">
             </div>
 
             <div class="p-6 sm:p-8 space-y-6">
@@ -777,29 +768,28 @@
     </div>
 
     <!-- YARD / TIMELINES GALLERY LIGHTBOX -->
-    <div id="yardLightbox" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex items-center justify-center p-4 bg-black/95 backdrop-blur-sm">
-        <button onclick="closeYardLightbox()" aria-label="Close" class="absolute top-6 right-6 z-50 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition">
-            <i class="fa-solid fa-xmark text-xl"></i>
-        </button>
-        
-        <!-- Left arrow -->
-        <button onclick="changeLightboxImg(-1)" aria-label="Previous image" class="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
-            <i class="fa-solid fa-chevron-left text-lg"></i>
+    <div id="yardLightbox" class="fixed inset-0 z-50 invisible opacity-0 transition-all duration-300 flex flex-col items-center justify-center gap-3 p-3 sm:p-6 bg-black/95 backdrop-blur-sm">
+        <button onclick="closeYardLightbox()" aria-label="Close" class="absolute top-4 right-4 z-50 w-11 h-11 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition">
+            <i class="fa-solid fa-xmark text-lg"></i>
         </button>
 
-        <!-- Image Container -->
-        <div class="max-w-4xl w-full max-h-[80vh] flex items-center justify-center">
-            <img id="lightboxTargetImg" src="slike/IMG_1562.jpg" alt="Yard Gallery Large" class="max-w-full max-h-[80vh] object-contain rounded shadow-2xl transition-all duration-300 transform scale-95">
+        <!-- Slika sa strelicama preko samih ivica slike -->
+        <div class="relative flex items-center justify-center">
+            <img id="lightboxTargetImg" alt="" draggable="false" class="block max-w-[92vw] sm:max-w-4xl max-h-[62vh] sm:max-h-[70vh] object-contain rounded-lg shadow-2xl select-none transition-all duration-300 transform scale-95">
+            <button onclick="changeLightboxImg(-1)" aria-label="Previous image" class="absolute left-2 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 bg-black/50 hover:bg-black/75 text-white rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button onclick="changeLightboxImg(1)" aria-label="Next image" class="absolute right-2 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 bg-black/50 hover:bg-black/75 text-white rounded-full flex items-center justify-center transition">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
-        <!-- Right arrow -->
-        <button onclick="changeLightboxImg(1)" aria-label="Next image" class="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/10 hover:bg-white/20 text-white rounded-full flex items-center justify-center transition z-40">
-            <i class="fa-solid fa-chevron-right text-lg"></i>
-        </button>
-        
-        <!-- Image Counter -->
-        <div id="lightboxCounter" class="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/70 text-sm tracking-widest font-medium">
-            1 / 3
+        <!-- Brojač i sličice za brz skok na bilo koju sliku -->
+        <div class="w-full max-w-4xl">
+            <div id="lightboxCounter" class="text-center text-white/70 text-sm tracking-widest font-medium mb-2">1 / 1</div>
+            <div id="lightboxThumbsWrap" class="overflow-x-auto">
+                <div id="lightboxThumbs" class="relative flex gap-2 w-max mx-auto px-1 pb-1"></div>
+            </div>
         </div>
     </div>
 <script>
@@ -812,7 +802,8 @@
                 slike: [
                     'slike/IMG_5941.jpg',
                     'slike/IMG_3693.JPG.jpeg',
-                    'slike/IMG_3694.JPG.jpeg'
+                    'slike/IMG_3694.JPG.jpeg',
+                    'slike/kupatilo.jpg'
                 ]
             },
             zeleni: {
@@ -821,7 +812,8 @@
                 slike: [
                     'slike/IMG_5959.jpg',
                     'slike/IMG_5937.jpg',
-                    'slike/IMG_5801.JPG.jpeg'
+                    'slike/IMG_5801.JPG.jpeg',
+                    'slike/kupatilo.jpg'
                 ]
             },
             zuti: {
@@ -830,12 +822,14 @@
                 slike: [
                     'slike/IMG_5966.jpg',
                     'slike/IMG_5962.jpg',
-                    'slike/IMG_5965.jpg'
+                    'slike/IMG_5965.jpg',
+                    'slike/kupatilo.jpg'
                 ]
             }
         };
 
         let currentActiveImages = [];
+        let trenutniModalIndex = 0;
 
         function openModal(id) {
             const data = apartmaniPodaci[id];
@@ -847,9 +841,11 @@
             document.getElementById('modalDesc').innerText = data.opis;
             
             // Set images to the three thumbnails below and remove active borders
-            for(let i=0; i<3; i++) {
+            for (let i = 0; i < 4; i++) {
                 const thumb = document.getElementById(`thumb${i}`);
-                thumb.src = data.slike[i];
+                if (!thumb) continue;
+                if (data.slike[i]) { thumb.src = data.slike[i]; thumb.classList.remove('hidden'); }
+                else { thumb.removeAttribute('src'); thumb.classList.add('hidden'); }
                 thumb.classList.replace('border-white', 'border-transparent');
                 thumb.classList.replace('opacity-100', 'opacity-70');
             }
@@ -864,12 +860,13 @@
         }
 
         function switchModalThumb(index) {
+            trenutniModalIndex = index;
             document.getElementById('modalImg').src = currentActiveImages[index];
-            
-            // Update borders and opacity to reflect the currently selected thumbnail
-            for(let i=0; i<3; i++) {
+
+            for (let i = 0; i < 4; i++) {
                 const thumb = document.getElementById(`thumb${i}`);
-                if(i === index) {
+                if (!thumb) continue;
+                if (i === index) {
                     thumb.classList.replace('border-transparent', 'border-white');
                     thumb.classList.replace('opacity-70', 'opacity-100');
                 } else {
@@ -877,6 +874,13 @@
                     thumb.classList.replace('opacity-100', 'opacity-70');
                 }
             }
+        }
+
+        // Strelice, tastatura i prevlačenje u galeriji apartmana
+        function pomeriModal(smer) {
+            const n = currentActiveImages.length;
+            if (!n) return;
+            switchModalThumb((trenutniModalIndex + smer + n) % n);
         }
 
         function closeModal() {
@@ -892,27 +896,83 @@
 
         // --- SMOOTH SLIDING SEAMLESS CAROUSEL FOR THE YARD ---
         const yardImages = [
-            'slike/IMG_5951.jpg',
-            'slike/289450498_Kucerak111IMG20210525171705jpg',
-            'slike/541740150_Kucerak111IMG19965a791baeb20273364d9553269f47Vjpg'
+            { src: 'slike/IMG_5951.jpg', alt: 'Dvorište', altEn: 'Yard' },
+            { src: 'slike/dvoriste-bazen-pogled.jpg', alt: 'Bazen, letnjikovac i dvorište', altEn: 'Pool, summer house and yard' },
+            { src: 'slike/bazen-blizu.jpg', alt: 'Bazen sa golovima za vaterpolo', altEn: 'Pool with floating water polo goals' },
+            { src: 'slike/letnjikovac-unutra.jpg', alt: 'Letnjikovac sa roštiljem i sedenjem', altEn: 'Summer house with grill and seating' },
+            { src: 'slike/igraliste-apartmani.jpg', alt: 'Dečije igralište ispred apartmana', altEn: 'Children’s playground in front of the apartments' },
+            { src: 'slike/apartmani-spolja.jpg', alt: 'Apartmani Kućerak 111 spolja', altEn: 'Kućerak 111 apartments from the outside' },
+            { src: 'slike/terasa-apartmana.jpg', alt: 'Natkrivena terasa apartmana', altEn: 'Covered terrace of the apartments' }
         ];
+
+        // Karusel i tačkice se prave iz spiska yardImages (slike se dodaju samo na jednom mestu)
+        function izgradiKarusel() {
+            const slider = document.getElementById('yardSlider');
+            const tacke = document.getElementById('yardDots');
+            if (!slider) return;
+            const en = document.documentElement.lang === 'en';
+            slider.innerHTML = yardImages.map((im, i) =>
+                `<div class="min-w-full h-full flex-shrink-0"><img ${i === 0 ? '' : 'loading="lazy" '}decoding="async" src="${im.src}" alt="${en ? im.altEn : im.alt}" class="w-full h-full object-cover"></div>`
+            ).join('');
+            if (tacke) tacke.innerHTML = yardImages.map((im, i) =>
+                `<button type="button" onclick="event.stopPropagation(); idiNaSliku(${i})" aria-label="${en ? 'Image' : 'Slika'} ${i + 1}" class="p-1"><span class="block w-2.5 h-2.5 ${i === 0 ? 'bg-white' : 'bg-white/50'} rounded-full transition-all duration-300" id="dot${i}"></span></button>`
+            ).join('');
+        }
+
+        // Sličice u velikoj galeriji se prave tek kad se galerija prvi put otvori (da se slike ne učitavaju unapred)
+        function napraviLightboxThumbs() {
+            const lt = document.getElementById('lightboxThumbs');
+            if (!lt || lt.children.length) return;
+            const en = document.documentElement.lang === 'en';
+            lt.innerHTML = yardImages.map((im, i) =>
+                `<button type="button" onclick="idiLightbox(${i})" aria-label="${en ? 'Image' : 'Slika'} ${i + 1}" class="flex-shrink-0 w-16 h-12 sm:w-20 sm:h-14 rounded overflow-hidden border-2 border-transparent opacity-60 hover:opacity-100 transition"><img src="${im.src}" alt="" loading="lazy" class="w-full h-full object-cover"></button>`
+            ).join('');
+        }
+
+        function osveziLightboxThumbs() {
+            const lt = document.getElementById('lightboxThumbs');
+            if (!lt) return;
+            Array.from(lt.children).forEach((b, i) => {
+                const aktivna = i === lightboxIndex;
+                b.classList.toggle('border-white', aktivna);
+                b.classList.toggle('border-transparent', !aktivna);
+                b.classList.toggle('opacity-100', aktivna);
+                b.classList.toggle('opacity-60', !aktivna);
+            });
+            const wrap = document.getElementById('lightboxThumbsWrap');
+            const aktivna = lt.children[lightboxIndex];
+            if (wrap && aktivna) wrap.scrollTo({ left: aktivna.offsetLeft - (wrap.clientWidth - aktivna.clientWidth) / 2, behavior: 'smooth' });
+        }
         let currentYardIndex = 0;
         const yardSlider = document.getElementById('yardSlider');
+        izgradiKarusel();
 
-        function moveYardSlide() {
-            currentYardIndex = (currentYardIndex + 1) % yardImages.length;
+        function prikaziSlajd() {
             yardSlider.style.transform = `translateX(-${currentYardIndex * 100}%)`;
-            
             for (let i = 0; i < yardImages.length; i++) {
                 const dot = document.getElementById(`dot${i}`);
                 if (dot) {
-                    if (i === currentYardIndex) {
-                        dot.classList.replace('bg-white/50', 'bg-white');
-                    } else {
-                        dot.classList.replace('bg-white', 'bg-white/50');
-                    }
+                    dot.classList.toggle('bg-white', i === currentYardIndex);
+                    dot.classList.toggle('bg-white/50', i !== currentYardIndex);
                 }
             }
+        }
+
+        function moveYardSlide() {
+            currentYardIndex = (currentYardIndex + 1) % yardImages.length;
+            prikaziSlajd();
+        }
+
+        // Ručno listanje: strelice, tačkice i prevlačenje prstom (automatsko listanje se tada ponovo pokreće)
+        function idiNaSliku(i) {
+            currentYardIndex = (i + yardImages.length) % yardImages.length;
+            prikaziSlajd();
+            clearInterval(autoSliderInterval);
+            autoSliderInterval = setInterval(moveYardSlide, 5000);
+        }
+
+        function pomeriKarusel(smer) {
+            idiNaSliku(currentYardIndex + smer);
         }
         
         let autoSliderInterval = setInterval(moveYardSlide, 5000);
@@ -921,6 +981,7 @@
         let lightboxIndex = 0;
 
         function openYardLightbox() {
+            napraviLightboxThumbs();
             lightboxIndex = currentYardIndex;
             updateLightboxView();
             
@@ -948,12 +1009,26 @@
 
         function updateLightboxView() {
             const imgElement = document.getElementById('lightboxTargetImg');
+            const en = document.documentElement.lang === 'en';
+            const im = yardImages[lightboxIndex];
             imgElement.style.opacity = '0';
             setTimeout(() => {
-                imgElement.src = yardImages[lightboxIndex];
+                imgElement.src = im.src;
+                imgElement.alt = en ? im.altEn : im.alt;
                 imgElement.style.opacity = '1';
                 document.getElementById('lightboxCounter').innerText = `${lightboxIndex + 1} / ${yardImages.length}`;
+                osveziLightboxThumbs();
+                // Unapred učitaj susedne slike da listanje bude trenutno
+                [1, -1].forEach(d => {
+                    const sused = new Image();
+                    sused.src = yardImages[(lightboxIndex + d + yardImages.length) % yardImages.length].src;
+                });
             }, 150);
+        }
+
+        function idiLightbox(i) {
+            lightboxIndex = i;
+            updateLightboxView();
         }
 
         document.getElementById('yardLightbox').addEventListener('click', function(e) {
@@ -969,6 +1044,28 @@
             }
         });
 
+        // Prevlačenje prstom (levo/desno) i tastatura za galerije
+        function dodajSvajp(el, naPomeri) {
+            if (!el) return;
+            let x0 = null;
+            el.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+            el.addEventListener('touchend', e => {
+                if (x0 === null) return;
+                const dx = e.changedTouches[0].clientX - x0;
+                x0 = null;
+                if (Math.abs(dx) > 50) naPomeri(dx < 0 ? 1 : -1);
+            });
+        }
+        dodajSvajp(document.getElementById('modalGalerija'), pomeriModal);
+        dodajSvajp(document.getElementById('yardKarusel'), pomeriKarusel);
+
+        document.addEventListener('keydown', function(e) {
+            const m = document.getElementById('apartmentModal');
+            if (!m || m.classList.contains('invisible')) return;
+            if (e.key === 'ArrowRight') pomeriModal(1);
+            if (e.key === 'ArrowLeft') pomeriModal(-1);
+        });
+
         function selectTeambuilding() {
             const selector = document.getElementById('smeštajSelektor');
             if (selector) { selector.value = 'ceo-kompleks'; zapamcenIzbor = 'ceo-kompleks'; if (typeof racunajCenu === 'function') racunajCenu(); }
@@ -977,14 +1074,14 @@
 const MSG = (document.documentElement.lang === 'en') ? {
             saljem: 'Sending...',
             zauzeto: "The selected accommodation is not available for these dates. Please choose different dates or another apartment, or contact us directly.",
-            wait: s => `Your booking inquiry has already been received. Please wait another ${s} seconds before sending another request.`,
+            wait: s => `Your inquiry has just been sent. Please wait another ${s} seconds before sending a new one. To add details, call us or message us on WhatsApp.`,
             dates: "Please select both an arrival and a departure date.",
             min: "The minimum stay is 2 nights. The departure date must be at least 2 days after arrival.",
             cap: "A single apartment sleeps up to 4 guests (a fifth guest can only be a baby in a cot). Please choose two apartments or the entire complex."
         } : {
             saljem: 'Šaljem...',
             zauzeto: "Izabrani smeštaj nije slobodan u ovom terminu. Izaberite drugi termin ili apartman, ili nas kontaktirajte direktno.",
-            wait: s => `Vaš upit je već uspešno primljen. Molimo vas sačekajte još ${s} sekundi pre slanja sledeće poruke.`,
+            wait: s => `Upit je upravo poslat. Molimo vas sačekajte još ${s} sekundi pre slanja novog. Ako želite da dopunite upit, pozovite nas ili pošaljite poruku na WhatsApp.`,
             dates: "Molimo izaberite datum dolaska i datum odlaska.",
             min: "Minimalan boravak je 2 noćenja. Datum odlaska mora biti najmanje 2 dana posle dolaska.",
             cap: "U jednom apartmanu može da boravi do 4 osobe (peti gost može biti samo beba u krevecu). Izaberite dva apartmana ili ceo kompleks."
@@ -1143,7 +1240,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
 
             // 2. Jedan upit na 5 minuta
             const sada = Date.now();
-            const pauza = 5 * 60 * 1000;
+            const pauza = 60 * 1000;
             let poslednje = 0;
             try { poslednje = parseInt(localStorage.getItem('vremePoslednjegUpita'), 10) || 0; } catch (e) {}
             if (poslednje && (sada - poslednje < pauza)) {
@@ -1201,7 +1298,7 @@ const MSG = (document.documentElement.lang === 'en') ? {
             const lb = document.getElementById('yardLightbox');
             if (!lb) return;
             let x0 = null;
-            lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+            lb.addEventListener('touchstart', e => { x0 = e.target.closest('#lightboxThumbsWrap') ? null : e.touches[0].clientX; }, { passive: true });
             lb.addEventListener('touchend', e => {
                 if (x0 === null) return;
                 const dx = e.changedTouches[0].clientX - x0;
